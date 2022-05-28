@@ -11,13 +11,11 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-
-export class CandidateService {
-
+export class ReclamationClientService {
   reclamationClient: ReclamationClient = new ReclamationClient();
   constructor(private httpClient:HttpClient, private _snackbar: MatSnackBar) { }
 
-  public createCandidate(reclamationClient: ReclamationClient, pj1:File, pj2:File) {
+  public createReclamationClient(reclamationClient: ReclamationClient, pj1:File, pj2:File) {
 
     const data:FormData= new FormData();
     data.append('reclamationClient',JSON.stringify(reclamationClient));
@@ -27,13 +25,13 @@ export class CandidateService {
     return this.httpClient.post<ReclamationClient>("http://localhost:8087/createreclamationClient", data);
   }
 
-  public getCandidatesList(){
+  public getReclamationClientsList(){
     console.log('test');
-    return this.httpClient.get<any>("http://localhost:8087/reclamationClients");
+    return this.httpClient.get<any>("http://localhost:8087/ReclamationClients",httpOptions);
   }
 
-  public getCandidate(id: number){
-    return this.httpClient.get<ReclamationClient>("http://localhost:8087/reclamationClient"+"/"+ id);
+  public getReclamationClient(id: number){
+    return this.httpClient.get<ReclamationClient>("http://localhost:8087/getreclamationClient/"+ id,httpOptions);
   }
 
   public downloadFile(pj1:String){
@@ -49,7 +47,7 @@ export class CandidateService {
     return this.httpClient.get<any>("http://localhost:8087/sendDenyMessage/"+ id);
   }
 
-  deleteCandidate(id: number) {
+  deleteReclamationClient(id: number) {
     return this.httpClient.delete("http://localhost:8087/reclamationClient/" + id);
       
   }

@@ -1,39 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ReclamationClient } from 'src/app/modals/reclamationClient';
-import { CandidateService } from 'src/app/services/candidate.service';
+import { ReclamationClientService } from 'src/app/services/reclamation-client.service';
 import { UserService } from 'src/app/services/user.service';
-
 @Component({
-  selector: 'app-profil-candidat',
-  templateUrl: './profil-candidat.component.html',
-  styleUrls: ['./profil-candidat.component.css']
+  selector: 'app-profil-client',
+  templateUrl: './profil-client.component.html',
+  styleUrls: ['./profil-client.component.css']
 })
-export class ProfilCandidatComponent implements OnInit {
+export class ProfilClientComponent implements OnInit {
 
   id: number ;
-  candidate : ReclamationClient = new ReclamationClient();
-  constructor(private route: ActivatedRoute, private candidateService : CandidateService,
+  reclamation : ReclamationClient = new ReclamationClient();
+  constructor(private route: ActivatedRoute, private reclamationService : ReclamationClientService,
     private userService : UserService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.id = params['id'];
     });
-    this.getCandidate();
+    this.getReclamation();
     
   }
 
-  getCandidate() {
+  getReclamation() {
     console.log(this.id);
-    this.candidateService.getCandidate(this.id).subscribe(
+    this.reclamationService.getReclamationClient(this.id).subscribe(
       response => {
-        this.candidate = response ; }
+        this.reclamation = response ; }
     );
   }
 
   sendConfirmMsg(id) {
-    this.candidateService.sendConfirmMessage(id).subscribe(  (candidate) => {
+    this.reclamationService.sendConfirmMessage(id).subscribe(  (reclamation) => {
       this.userService.toastMessage("Email sent successffully")
     },(error) =>{
       this.userService.toastMessage("Email sent successffully")
@@ -45,8 +44,8 @@ export class ProfilCandidatComponent implements OnInit {
   
 
   sendDenyMsg(id) {
-    this.candidateService.sendDenyMessage(id)
-    .subscribe( (candidate) =>{
+    this.reclamationService.sendDenyMessage(id)
+    .subscribe( (reclamation) =>{
       this.userService.toastMessage("Email sent successffully")
     },(error) =>{
       this.userService.toastMessage("Email sent successffully")

@@ -1,0 +1,62 @@
+<div class="wrapper">
+    <div class="left">
+        <img src="assets/img/candi.png" alt="user"  class="img-circle">
+        <h5>{{reclamation.prenom}} {{reclamation.nom}} </h5>
+
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>Civility</h3>
+            <div class="info_data">
+                <div class="data">
+                    <h4>Email</h4>
+                    <p>{{reclamation.email}}</p>
+                </div>
+                <div class="data">
+                    <h4>Phone</h4>
+                    <p>{{reclamation.phone}}</p>
+                </div>
+                <div class="data">
+                    <h4>Date of birth</h4>
+                    <p>{{reclamation.dateOfBirth}}</p>
+                </div>
+
+            </div>
+        </div>
+
+        
+       
+
+        <div class="exp">
+            <h3>Attached documents
+            </h3>
+            <div class="exp_data">
+                <div class="data">
+                  
+                    <a href="http://localhost:8087/downloadFile/{{reclamation.pj1}}"
+                class="cv">  <h4 style="color:blue">Fichier 1   
+                      <i class="fa fa-download"></i></h4></a>
+                  
+                </div>
+                <div class="data">
+                   
+                    <a href="http://localhost:8087/downloadFile/{{reclamation.pj2}}"
+                class="cv"> <h4 style="color:blue">Fichier 2   
+                       <i class="fa fa-download"></i></h4></a>
+                
+                   
+                    
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+    <div class="container">
+    <a class="btn btn1"(click)="sendConfirmMsg(reclamation.idReclamation)">Send an email of confirmation</a>
+    <a class="btn btn2" (click)="sendDenyMsg(reclamation.idReclamation)">Send an email of rejection</a>
+    </div>
+

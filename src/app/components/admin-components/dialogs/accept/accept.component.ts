@@ -25,9 +25,9 @@ export class AcceptComponent implements OnInit {
     }
   
     onAcceptConge():void {
-      this.congeService.acceptConge(this.conge.idCong)
+      this.congeService.acceptConge(this.conge.idDemande)
       .subscribe(  data => {
-        alert("Holiday accepted");
+        alert("Request accepted");
       });
     };
   

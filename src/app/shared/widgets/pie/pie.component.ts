@@ -50,7 +50,7 @@ export class PieComponent implements OnInit {
         type: 'pie',
         name: '%',
          data: [
-            ['technic',   45.0],
+            ['technical',   45.0],
            
             {
                name: 'logistic',

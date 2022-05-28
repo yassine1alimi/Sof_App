@@ -14,7 +14,7 @@ export class User {
    // public  cnss : String;
     public  departement : String;
     public  fonction : String;
-   // public  typeContrat : String;
+    public  typeContrat : String;
     public  dateEntree : Date;
     public  coutHeuresSup : String;
     public  dureeConges : number;

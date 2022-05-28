@@ -45,7 +45,7 @@ export class CongeService {
   }
 
   deleteConge(id:number){
-    return this.httpClient.delete("http://localhost:8087//deleteDemande/"+id);
+    return this.httpClient.delete("http://localhost:8087/deleteDemande/"+id);
   }
 
 }

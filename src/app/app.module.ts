@@ -10,10 +10,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AddEmployeComponent } from './components/admin-components/add-employe/add-employe.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeService } from './services/employe.service';
-import { InfoCandidateComponent } from './components/candidate-components/info-candidate/info-candidate.component';
+//import { InfoCandidateComponent } from './components/candidate-components/info-candidate/info-candidate.component';
 import { CandidateService } from './services/candidate.service';
 import { ReactiveFormsModule} from '@angular/forms';
-import { DemandeCongeComponent } from './components/employe-components/demande-conge/demande-conge.component';
 import { DemandeDocComponent } from './components/employe-components/demande-doc/demande-doc.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -40,7 +39,7 @@ import { ProfileEmployeComponent } from './components/admin-components/profile-e
 import { UpdateEmployeComponent } from './components/admin-components/update-employe/update-employe.component';
 
 
-import { RecrutementsComponent } from './components/admin-components/recrutements/recrutements.component';
+//import { RecrutementsComponent } from './components/admin-components/recrutements/recrutements.component';
 import { NotesInternesComponent } from './components/admin-components/notes/notes-internes/notes-internes.component';
 import { EmailService } from './services/email.service';
 import { MatIconModule, MatButtonModule, MatInputModule, MatExpansionModule, MatCheckboxModule, MatToolbarModule, MatCardModule, MatSnackBarModule } from '@angular/material';
@@ -55,7 +54,6 @@ import { ListMeetingComponent } from './components/admin-components/meetings/lis
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
-import { ListCongesComponent } from './components/admin-components/conges/list-conges/list-conges.component';
 import { AcceptComponent } from './components/admin-components/dialogs/accept/accept.component';
 import { PresenceCalendarComponent } from './components/employe-components/presence-calendar/presence-calendar.component';
 import { HolidayCalendarComponent } from './components/admin-components/holiday-calendar/holiday-calendar.component';
@@ -82,17 +80,22 @@ import { UpdateInfoEmployeComponent } from './components/employe-components/upda
 import { UpdateMeetingComponent } from './components/admin-components/meetings/update-meeting/update-meeting.component';
 import { UpdateNoteComponent } from './components/admin-components/notes/update-note/update-note.component';
 import { UpdateTodoComponent } from './components/admin-components/todos/update-todo/update-todo.component';
-//import { CongeRequestComponent } from './components/admin-components/conges/conge-request/conge-request.component';
-//import { CongeEmployeComponent } from './components/employe-components/conge-employe/conge-employe.component';
 import { UpdatePhotoComponent } from './components/admin-components/update-photo/update-photo.component';
-import { BilanCongesComponent } from './components/admin-components/conges/bilan-conges/bilan-conges.component';
-import { ResponseComponent } from './components/candidate-components/response/response.component';
+import { ResponseComponent } from './components/client-components/response/response.component';
 import { UpdateProfilComponent } from './components/update-profil/update-profil.component';
 import { ArchivedEmployesComponent } from './components/admin-components/archived-employes/archived-employes.component';
 import {EditorModule} from '@tinymce/tinymce-angular';
 
 
 import {    MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { BilanDemandesComponent } from './components/admin-components/demandes/bilan-demandes/bilan-demandes.component';
+import { DemandeRequestComponent } from './components/admin-components/demandes/demande-request/demande-request.component';
+import { ListDemandesComponent } from './components/admin-components/demandes/list-demandes/list-demandes.component';
+import { DemandeEmployeComponent } from './components/employe-components/demande-employe/demande-employe.component';
+import { DemandeRequestEmployeComponent } from './components/employe-components/demande-request-employe/demande-request-employe.component';
+import { InfoReclamationClientComponent } from './components/client-components/info-reclamation-client/info-reclamation-client.component';
+import { ProfilClientComponent } from './components/admin-components/profil-client/profil-client.component';
+import { ListReclamationsComponent } from './components/admin-components/list-reclamations/list-reclamations.component';
 
 @NgModule({
   declarations: [
@@ -100,15 +103,14 @@ import {    MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
     NavbarComponent,
     SidebarComponent,
     AddEmployeComponent,
-    InfoCandidateComponent,
-    DemandeCongeComponent,
+    //InfoCandidateComponent,
     DemandeDocComponent,
     ListEmployesComponent,
     TodoListComponent,
     ProfileEmployeComponent,
     UpdateEmployeComponent,
     
-    RecrutementsComponent,
+   // RecrutementsComponent,
     NotesInternesComponent,
     AjoutNoteComponent,
    // CaisseComponent,
@@ -119,7 +121,6 @@ import {    MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
     ListMeetingComponent,
     LoginComponent,
     RegisterComponent,
-    ListCongesComponent,
     AcceptComponent,
     PresenceCalendarComponent,
     HolidayCalendarComponent,
@@ -139,13 +140,18 @@ import {    MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
     UpdateMeetingComponent,
     UpdateNoteComponent,
     UpdateTodoComponent,
-    //CongeRequestComponent,
-    //CongeEmployeComponent,
     UpdatePhotoComponent,
-    BilanCongesComponent,
     ResponseComponent,
     UpdateProfilComponent,
     ArchivedEmployesComponent,
+    BilanDemandesComponent,
+    DemandeRequestComponent,
+    ListDemandesComponent,
+    DemandeEmployeComponent,
+    DemandeRequestEmployeComponent,
+    InfoReclamationClientComponent,
+    ProfilClientComponent,
+    ListReclamationsComponent,
     
     
    
@@ -200,7 +206,7 @@ import {    MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
   ],
   providers: [EmployeService,CandidateService,TodoService,EmailService,authInterceptorProviders,  { provide: MAT_DIALOG_DATA, useValue: {} },
     { provide: MatDialogRef, useValue: {} }],
-  bootstrap: [AppComponent,ListCongesComponent],
+  bootstrap: [AppComponent,ListDemandesComponent],
   entryComponents:[AjoutNoteComponent,AddTodoComponent,MeetingComponent,AcceptComponent,UpdateMeetingComponent]
 })
 export class AppModule { }

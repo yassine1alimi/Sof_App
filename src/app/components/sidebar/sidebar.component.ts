@@ -37,6 +37,8 @@ export class SidebarComponent implements OnInit {
 
       this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
       this.showUserBoard = this.roles.includes('ROLE_USER');
+      //this.showEmployeBoard = this.roles.includes('ROLE_EMPLOYE');
+
 
       this.username = user.username;
       this.id = user.id;

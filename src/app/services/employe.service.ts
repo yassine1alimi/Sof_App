@@ -42,7 +42,7 @@ export class EmployeService {
 
   public generateReport(id: number){
     
-    return this.httpClient.get<any>("http://localhost:8087/report/pdf"+"/"+ id);
+    return this.httpClient.get<any>("http://localhost:8087/report/pdf"+"/"+ id, httpOptions);
   }
 
   public deleteEmployeById (id: number)  {

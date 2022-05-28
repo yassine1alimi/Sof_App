@@ -2,12 +2,12 @@
 import { User } from './user';
 
 export class Conge {
-      idCong:number;
-	  typeCong:String;
-	 // debutCong:Date;
-	  //finCong:Date;
-	  createdAt:Date;
-	  description:String;
+	idDemande:number;
+	typeDemande:String;
+	debutDemande:Date;
+	finDemande:Date;
+	createdAt:Date;
+    description:String;
 	 // duree: String; 
 	  //soldeConge: number;
 	  statusOfDemand: boolean;
