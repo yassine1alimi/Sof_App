@@ -1,7 +1,7 @@
 
 import { User } from './user';
 
-export class Conge {
+export class Demande {
 	idDemande:number;
 	typeDemande:String;
 	debutDemande:Date;

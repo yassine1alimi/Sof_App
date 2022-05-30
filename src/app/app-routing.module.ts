@@ -39,14 +39,11 @@ import { UpdateInfoEmployeComponent } from './components/employe-components/upda
 import { UpdateMeetingComponent } from './components/admin-components/meetings/update-meeting/update-meeting.component';
 import { UpdateNoteComponent } from './components/admin-components/notes/update-note/update-note.component';
 import { UpdateTodoComponent } from './components/admin-components/todos/update-todo/update-todo.component';
-//import { CongeRequestComponent } from './components/admin-components/conges/conge-request/conge-request.component';
 import { DemandeRequestComponent } from './components/admin-components/demandes/demande-request/demande-request.component';
 
-//import { CongeEmployeComponent } from './components/employe-components/conge-employe/conge-employe.component';
 import { DemandeEmployeComponent } from './components/employe-components/demande-employe/demande-employe.component';
 
 import { UpdatePhotoComponent } from './components/admin-components/update-photo/update-photo.component';
-//import { BilanCongesComponent } from './components/admin-components/conges/bilan-conges/bilan-conges.component';
 import { BilanDemandesComponent } from './components/admin-components/demandes/bilan-demandes/bilan-demandes.component';
 
 import { ResponseComponent } from './components/client-components/response/response.component';
@@ -80,8 +77,7 @@ const routes: Routes = [
   {path:'dashboard', component: DashboardComponent},
   {path:'profil', component: UpdateProfilComponent},
   { path: 'addEmploye', component: AddEmployeComponent },
-  //{ path: 'ajouter_demande', component: DemandeCongeComponent }, 
-    //{ path: 'ajouter_demande', component: DemandeRequestEmployeComponent }, 
+    { path: 'ajouter_demande', component: DemandeRequestEmployeComponent }, 
 
   
   { path: 'listEmployes', component: ListEmployesComponent },
@@ -96,25 +92,21 @@ const routes: Routes = [
   { path: 'updateNote', component: UpdateNoteComponent },
   { path: 'updateTodo', component: UpdateTodoComponent },
   { path: 'profilClient/:id', component: ProfilClientComponent },
-  //{ path: 'congeRequest/:id', component: CongeRequestComponent },
-   // { path: 'congeRequest/:id', component: DemandeRequestComponent },
+   { path: 'demandeRequest/:id', component: DemandeRequestComponent },
 
   { path: 'info-employe/:id', component: InfoEmployeComponent },
   
-  //{ path: 'bilan-demandes', component: BilanCongesComponent },
   { path: 'bilan-demandes', component: BilanDemandesComponent },
 
   { path: 'notesInternes', component: NotesInternesComponent },
   { path: 'employe-notesInternes', component: NotesInternesEmployeComponent },
-  //{ path: 'history_requests', component: CongeEmployeComponent },
-    //{ path: 'history_requests', component: DemandeEmployeComponent },
+    { path: 'history_requests', component: DemandeEmployeComponent },
 
   { path: 'list-reclamations', component: ListReclamationsComponent },
 
  // { path: 'caisse', component: CaisseComponent },
   { path: 'timetracking', component: TimetrackingComponent },
   { path: 'meetings', component: ListMeetingComponent },
-  //{ path: 'list-requests', component: ListCongesComponent },
   { path: 'list-requests', component: ListDemandesComponent },
 
   { path: 'presence-calendar/:id', component: PresenceCalendarComponent },

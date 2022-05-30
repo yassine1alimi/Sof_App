@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Presence } from '../modals/presence';
 import { Observable } from 'rxjs';
 import { Evenement } from '../modals/event';
-
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' , 'Access-Control-Allow-Origin':'*',
+})
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +18,7 @@ export class PresenceService {
   constructor(private httpClient:HttpClient) { }
 
 getPresences():Observable<any> {
-  return this.httpClient.get<any> ("http//localhost:8087/presences");
+  return this.httpClient.get<any> ("http//localhost:8087/presences",httpOptions);
 }
 
 public createPresence(presence)
@@ -46,6 +49,6 @@ public addPresence(presence:Presence,id:number){
 }
 
 public getPresence (id:number){
-  return this.httpClient.get<any>("http://localhost:8087/getPresence?id="+id);
+  return this.httpClient.get<any>("http://localhost:8087/getPresence?id="+id,httpOptions);
 }
 }

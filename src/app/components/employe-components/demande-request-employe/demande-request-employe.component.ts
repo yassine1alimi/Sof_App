@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModalConfig , NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { CongeService } from 'src/app/services/conge.service';
-import { Conge } from 'src/app/modals/conge';
+import { DemandeService } from 'src/app/services/demande.service';
+import { Demande } from 'src/app/modals/demande';
 import { TokenStorageService } from 'src/app/services/token-storage.service';
 import { UserService } from 'src/app/services/user.service';
 @Component({
@@ -11,9 +11,9 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class DemandeRequestEmployeComponent implements OnInit {
 
-  conge: Conge = new Conge();
+  demande: Demande = new Demande();
   id : number;
-  constructor( private congeService:CongeService,
+  constructor( private demandeService:DemandeService,
     private tokenStorageService: TokenStorageService,
     private userService: UserService) {
     
@@ -24,8 +24,8 @@ export class DemandeRequestEmployeComponent implements OnInit {
     this.id = user.id;
   }
 
-  createDemandeConge():void {
-    this.congeService.createDemandeConge(this.conge,this.id)
+  createDemandeDemande():void {
+    this.demandeService.createDemandeDemande(this.demande,this.id)
     .subscribe( data => {
       this.userService.toastMessage("Demand created successfully")
      },(error) => {

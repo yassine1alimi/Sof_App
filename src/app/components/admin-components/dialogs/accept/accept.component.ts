@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
-import { CongeService } from 'src/app/services/conge.service';
-import { Conge } from 'src/app/modals/conge';
+import { DemandeService } from 'src/app/services/demande.service';
+import { Demande } from 'src/app/modals/demande';
 
 @Component({
   selector: 'app-accept',
@@ -10,24 +10,24 @@ import { Conge } from 'src/app/modals/conge';
 })
 export class AcceptComponent implements OnInit {
 
-  conge: Conge = new Conge();
+  demande: Demande = new Demande();
 
-  constructor(public dialogRef: MatDialogRef<AcceptComponent>, private congeService:CongeService) { }
+  constructor(public dialogRef: MatDialogRef<AcceptComponent>, private demandeService:DemandeService) { }
 
   ngOnInit() {
   }
 
   onSubmit(){
   
-    this.onAcceptConge();
+    this.onAcceptDemande();
     this.onClose();
    
     }
   
-    onAcceptConge():void {
-      this.congeService.acceptConge(this.conge.idDemande)
+    onAcceptDemande():void {
+      this.demandeService.acceptDemande(this.demande.idDemande)
       .subscribe(  data => {
-        alert("Request accepted");
+        alert("Demande accepted");
       });
     };
   

@@ -34,7 +34,7 @@ export class PresenceCalendarComponent implements OnInit {
 
   
 
-  dayRender(args){
+  dayRender(args: { el: HTMLElement; date: any; }){
     console.log("dayRender")
     console.log(args)
     var cell:HTMLElement = args.el ; 
@@ -53,7 +53,7 @@ export class PresenceCalendarComponent implements OnInit {
       console.log("addevent")
       console.log((date.getMonth()+1).toString().length)
       let pres = new Presence();
-      pres.nbrheures = Number(title);
+      pres.nbrreclamations = Number(title);
       pres.day =date.getFullYear()+"-"+((date.getMonth()+1).toString().length == 1 ? "0"+(date.getMonth()+1):(date.getMonth()+1))+"-"+(date.getDate().toString().length == 1 ? "0"+date.getDate():date.getDate());
       console.log(pres)
       this.addPresence(pres,this.id);
@@ -68,21 +68,21 @@ export class PresenceCalendarComponent implements OnInit {
       })*/
   }
 
-  addPresence(presence,id){
+  addPresence(presence: Presence,id: number){
     this.presenceService.addPresence(presence,id).subscribe(
       response => {
         this.events = response; }
      );
   }
 
-  getPresence(id){
+  getPresence(id: number){
     this.presenceService.getPresence(id).subscribe(
       response => {
         console.log(response);
        // var res = JSON.parse(response); 
         response.forEach((element:Presence) => {
         this.calendarEvents = this.calendarEvents.concat({
-          title:""+element.nbrheures,
+          title:""+element.nbrreclamations,
           start:element.day
         })  
         });

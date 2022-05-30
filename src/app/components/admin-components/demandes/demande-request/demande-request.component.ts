@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Conge } from 'src/app/modals/conge';
+import { Demande } from 'src/app/modals/demande';
 import { EmployeService } from 'src/app/services/employe.service';
 import { Employe } from 'src/app/modals/employe';
-import { CongeService } from 'src/app/services/conge.service';
+import { DemandeService } from 'src/app/services/demande.service';
 import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'app-demande-request',
@@ -12,32 +12,32 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class DemandeRequestComponent implements OnInit {
   id:any;
-  conge : Conge = new Conge();
+  demande : Demande = new Demande();
   employe : Employe = new Employe();
    constructor( private route: ActivatedRoute,private employeService:EmployeService,
-     private congeService: CongeService, private userService: UserService) { }
+     private demandeService: DemandeService, private userService: UserService) { }
  
    ngOnInit() {
      this.route.params.subscribe(params => {
        this.id = params['id'];
      });
-     this.getConge();
+     this.getDemande();
    }
  
    
-   getConge(){
+   getDemande(){
      console.log(this.id);
-     this.congeService.getConge(this.id).subscribe(
+     this.demandeService.getDemande(this.id).subscribe(
        response => {
-         this.conge = response ; }
+         this.demande = response ; }
      );
    }
  
-   onAcceptConge() {
+   onAcceptDemande() {
      
-     this.congeService.acceptConge(this.id)
-     .subscribe(  (conge) => {
-       this.userService.toastMessage("Holiday accepted")
+     this.demandeService.acceptDemande(this.id)
+     .subscribe(  (demande) => {
+       this.userService.toastMessage("demande accepted")
      },(error) => {
        this.userService.toastMessage("failed action")
      }
@@ -45,10 +45,10 @@ export class DemandeRequestComponent implements OnInit {
    };
  
  
-   onRefuseConge() {
-     this.congeService.refuseConge(this.id)
-     .subscribe(  (conge) => {
-       this.userService.toastMessage("Holiday refused")
+   onRefuseDemande() {
+     this.demandeService.refuseDemande(this.id)
+     .subscribe(  (demande) => {
+       this.userService.toastMessage("demande refused")
      },(error) =>{
        this.userService.toastMessage("failed action")
      }

@@ -36,15 +36,15 @@ export class ReclamationClientService {
 
   public downloadFile(pj1:String){
     
-    return this.httpClient.get<any>("http://localhost:8087//downloadFile"+"/"+ pj1);
+    return this.httpClient.get<any>("http://localhost:8087//downloadFile"+"/"+ pj1,httpOptions);
   }
 
   public sendConfirmMessage(id:number){
-    return this.httpClient.get<any>("http://localhost:8087/sendConfirmMessage/"+ id);
+    return this.httpClient.get<any>("http://localhost:8087/sendConfirmMessage/"+ id,httpOptions);
   }
 
   public sendDenyMessage(id:number){
-    return this.httpClient.get<any>("http://localhost:8087/sendDenyMessage/"+ id);
+    return this.httpClient.get<any>("http://localhost:8087/sendDenyMessage/"+ id,httpOptions);
   }
 
   deleteReclamationClient(id: number) {

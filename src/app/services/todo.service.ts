@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient , HttpHeaders} from '@angular/common/http';
 import { Todo } from '../modals/todo';
-
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' , 'Access-Control-Allow-Origin':'*',
+})
+}
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +18,7 @@ export class TodoService {
   constructor(private http:HttpClient) { }
 
   public getTodos(){
-    return this.http.get<any>(this.baseUrl + '/todos/');
+    return this.http.get<any>(this.baseUrl + '/todos/',httpOptions);
      
   }
 
@@ -37,7 +40,7 @@ export class TodoService {
   }
 
   comletedTodo(id:number) {
-    return this.http.get("http://localhost:8087/completed/"+id);
+    return this.http.get("http://localhost:8087/completed/"+id,httpOptions);
   }
 
   public updateTodo(todo:Todo) {

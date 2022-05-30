@@ -1,11 +1,11 @@
 
-<div class="container" >
+  <div class="container" >
 
    
 
 
     <div class="left"> 
-        <img src="http://localhost:8087/avatar/{{conge.user.idUser}}" alt="user" width="150" class="img-circle">
+        <img src="http://localhost:8087/avatar/{{demande.user.idUser}}" alt="user" width="150" class="img-circle">
         <br>
         <br>
         <h4>{{employe.prenom}} {{employe.nom}} </h4>
@@ -14,28 +14,26 @@
       </div>
     
     <div class="right">
-        <h5><i class="fa fa-angle-right"></i> Request for a vacation</h5>
+        <h5><i class="fa fa-angle-right"></i> Request for a Demande</h5>
         <br>
         <br>
         <div class="info">
               
           <div class="info_data">
-                <div class="data">
-                  <h4>Period <p> {{conge.duree}}</p> </h4>
-              </div>
+                
               <div class="data">
                 <h4>Type of vacation
-                <p> {{conge.typeCong}}</p> </h4>
+                <p> {{demande.typeDemande}}</p> </h4>
             </div>
           </div>
           <div class="info_data">
               <div class="data">
                 <h4>Start day</h4>
-                <p> {{conge.debutCong}}</p>
+                <p> {{demande.debutDemande}}</p>
             </div>
             <div class="data">
               <h4>end day</h4>
-              <p> {{conge.finCong}}</p>
+              <p> {{demande.finDemande}}</p>
             </div>
           </div>
             
@@ -55,13 +53,13 @@
                         <h4 class="modal-title"></h4>
                       </div>
                       <div class="modal-body">
-                        <p>Do you want to agree to assign the vacation?</p>
+                        <p>Do you want to agree to assign the Demande?</p>
                       </div>
                       <div class="modal-footer">
                         <div>
                          
                         <button type="button" class="btn btn-default" data-dismiss="modal"
-                        (click)="onAcceptConge()"(click)="showModal1=false">Accept</button>
+                        (click)="onAcceptDemande()"(click)="showModal1=false">Accept</button>
                     
                         <button type="button" class="btn btn-default" data-dismiss="modal"
                         (click)="showModal1=false">Cancel</button>
@@ -94,7 +92,7 @@
                     <div>
                      
                     <button type="button" class="btn btn-default" data-dismiss="modal"
-                    (click)="onRefuseConge()"(click)="showModal2=false">Refuse</button>
+                    (click)="onRefuseDemande()"(click)="showModal2=false">Refuse</button>
                 
                     <button type="button" class="btn btn-default" data-dismiss="modal"
                     (click)="showModal2=false">Cancel</button>
@@ -117,3 +115,4 @@
             
         
       </div>
+-->

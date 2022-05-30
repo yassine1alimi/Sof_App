@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Conge } from 'src/app/modals/conge';
-import { CongeService } from 'src/app/services/conge.service';
+import { Demande } from 'src/app/modals/demande';
+import { DemandeService } from 'src/app/services/demande.service';
 import { MatDialogConfig, MatDialog } from '@angular/material';
 @Component({
   selector: 'app-list-demandes',
@@ -10,18 +10,18 @@ import { MatDialogConfig, MatDialog } from '@angular/material';
 export class ListDemandesComponent implements OnInit {
 
   isPopupOpened = false;
-  conge : Conge = new Conge();
-  conges : any;
-  constructor(private congeService:CongeService,private dialog: MatDialog) { }
+  demande : Demande = new Demande();
+  demandes : any;
+  constructor(private demandeService:DemandeService,private dialog: MatDialog) { }
 
   ngOnInit() {
-    this.getConges();
+    this.getDemandes();
   }
 
-  getConges(){
-    this.congeService.getCongesList().subscribe(
+  getDemandes(){
+    this.demandeService.getDemandesList().subscribe(
       response => {
-        this.conges = response
+        this.demandes = response
       console.log(response)}
      );
      
@@ -29,25 +29,25 @@ export class ListDemandesComponent implements OnInit {
 
   
 
-  onAcceptConge(id) {
+  onAcceptDemande(id) {
     console.log(id+"hell");
-    this.congeService.acceptConge(id)
+    this.demandeService.acceptDemande(id)
     .subscribe(  data => {
-      alert("Holiday accepted");
+      alert("demande accepted");
     });
   };
 
-  onRefuseConge(id) {
-    this.congeService.refuseConge(id)
+  onRefuseDemande(id) {
+    this.demandeService.refuseDemande(id)
     .subscribe(  data => {
-      alert("Holiday refused");
+      alert("demande refused");
     });
   };
 
-  onDeleteConge(id){
-    this.congeService.deleteConge(id)
+  onDeletedemande(id){
+    this.demandeService.deleteDemande(id)
     .subscribe(  data => {
-      alert("Holiday deleted successfully");
+      alert("demande deleted successfully");
     });
   }
 

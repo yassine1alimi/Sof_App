@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { NoteInterne } from '../modals/noteInterne';
 import { Observable } from 'rxjs';
 import { PostPayload } from '../modals/post-payload';
-
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' , 'Access-Control-Allow-Origin':'*',
+})
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +17,7 @@ export class NoteinterneService {
   constructor(private httpClient:HttpClient) { }
 
   getAllNoteIntern():Observable<any> {
-    return this.httpClient.get<any>("http://localhost:8087/notes");
+    return this.httpClient.get<any>("http://localhost:8087/notes",httpOptions);
    }
 
   /*public onCreateNoteInterne(noteInterne) {

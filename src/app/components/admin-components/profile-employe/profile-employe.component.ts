@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Conge } from '../../../modals/conge';
+import { Demande } from '../../../modals/demande';
 import { Employe } from '../../../modals/employe';
 import { EmployeService } from '../../../services/employe.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -15,7 +15,7 @@ export class ProfileEmployeComponent implements OnInit {
 
   id: number ;
   private sub: any ; 
-  conge: Conge  = new Conge();
+  demande: Demande  = new Demande();
   employe: Employe = new Employe();
  
   constructor(private employeService:EmployeService,

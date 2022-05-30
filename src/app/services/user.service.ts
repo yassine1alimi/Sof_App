@@ -19,7 +19,7 @@ export class UserService {
 
   public getUser(id: any) {
     console.log("this is id ="+ id)
-    return this.http.get<any>("http://localhost:8087/user/"+ id);
+    return this.http.get<any>("http://localhost:8087/user/"+ id,httpOptions);
   }
 
 /*
@@ -30,7 +30,7 @@ export class UserService {
 */ 
 
   public getUserAvatar(id: number){
-    return this.http.get(`${environment.baseURL}/avatar/${id}`);
+    return this.http.get(`${environment.baseURL}/avatar/${id}`,httpOptions);
   }
 
   toastMessage(message){

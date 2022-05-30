@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Meeting } from '../modals/meeting';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' , 'Access-Control-Allow-Origin':'*',
+})
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +16,7 @@ export class MeetingService {
 
   getAllmeetings():Observable<any> {
   
-    return this.httpClient.get<any>("http://localhost:8087/meetings");
+    return this.httpClient.get<any>("http://localhost:8087/meetings",httpOptions);
    }
 
   public onCreateMeeting(meeting) {

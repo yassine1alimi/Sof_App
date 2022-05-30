@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TokenStorageService } from 'src/app/services/token-storage.service';
-import { CongeService } from 'src/app/services/conge.service';
-import { Conge } from 'src/app/modals/conge';
+import { DemandeService } from 'src/app/services/demande.service';
+import { Demande } from 'src/app/modals/demande';
 import { User } from 'src/app/modals/user';
 import { Employe } from 'src/app/modals/employe';
 import { UserService } from 'src/app/services/user.service';
@@ -12,24 +12,24 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class DemandeEmployeComponent implements OnInit {
 
-  conge: Conge = new Conge();
+  demande: Demande = new Demande();
   id:number;
-  conges:Conge[];
+  demandes:Demande[];
   user1: User = new User();
   employe : Employe = new Employe();
-  constructor(private congeService:CongeService,private userService:UserService,private tokenStorageService: TokenStorageService) { }
+  constructor(private demandeService:DemandeService,private userService:UserService,private tokenStorageService: TokenStorageService) { }
 
   ngOnInit() {
     const user = this.tokenStorageService.getUser();
     this.id = user.id;
-    this.getCongesOfUser();
+    this.getDemandesOfUser();
     this.getUser();
   }
 
-  getCongesOfUser(){
-    this.congeService.getCongesOfUser(this.id).subscribe(
+  getDemandesOfUser(){
+    this.demandeService.getDemandesOfUser(this.id).subscribe(
       response => {
-        this.conges = response; }
+        this.demandes = response; }
      );
   }
 

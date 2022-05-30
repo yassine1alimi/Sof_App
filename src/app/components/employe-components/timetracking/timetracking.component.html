@@ -13,7 +13,7 @@
           <div class="form-group">
             <label class="col-sm-2 col-sm-2 control-label" >Nombre d'heures</label>
             <div class="col-sm-10">
-              <input type="number" [(ngModel)]="presence.nbrheures" class="form-control" id="nbrheures" placeholder="">
+              <input type="number" [(ngModel)]="presence.nbrreclamations" class="form-control" id="nbrreclamations" placeholder="">
             </div>
           </div>
             
@@ -38,7 +38,7 @@
             <tbody>
                 <tr *ngFor="let presence of presences" >
                     <td>{{presence.day}}</td>
-                    <td>{{presence.nbrheures}}</td>   
+                    <td>{{presence.nbrreclamations}}</td>   
                 </tr>
             </tbody>
           </table>
