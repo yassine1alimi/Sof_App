@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Employe } from 'src/app/modals/employe';
 import { EmployeService } from 'src/app/services/employe.service';
 import { Router } from '@angular/router';
+import { Demande } from 'src/app/modals/demande';
 @Component({
   selector: 'app-bilan-demandes',
   templateUrl: './bilan-demandes.component.html',
@@ -13,6 +14,7 @@ export class BilanDemandesComponent implements OnInit {
   id : number; 
   employees: Employe[];
   p : number=1;
+  demande:Demande;
   constructor(private employeService:EmployeService,private router:Router) { }
 
   ngOnInit() {

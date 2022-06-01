@@ -51,6 +51,8 @@ import { UpdateProfilComponent } from './components/update-profil/update-profil.
 import { ArchivedEmployesComponent } from './components/admin-components/archived-employes/archived-employes.component';
 
 import{ListReclamationsComponent} from './components/admin-components/list-reclamations/list-reclamations.component'
+import { ListGroupeComponent } from './components/admin-components/groupe/list-groupe/list-groupe.component';
+import { ListDepartementComponent } from './components/admin-components/groupe/list-departement/list-departement.component';
 
 //import { HomeComponent } from './home/home.component';
 //import { RegisterComponent } from './register/register.component';
@@ -113,6 +115,9 @@ const routes: Routes = [
   { path: 'presence', component: PresenceAdminComponent },
   { path: 'holiday-calendar', component: HolidayCalendarComponent }]},
   
+  { path: 'groupeList', component: ListGroupeComponent },
+  { path: 'departementList', component: ListDepartementComponent },
+
 
  
   { path: 'footer', component: FooterComponent },

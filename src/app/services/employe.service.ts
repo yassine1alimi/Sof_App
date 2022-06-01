@@ -29,6 +29,7 @@ export class EmployeService {
   }
 
   public archiveEmploye(id: any){
+    console.log("archive employeeeeeeeeeeeeeeeeeeeee")
     return this.httpClient.get<any>("http://localhost:8087/archiveEmploye/"+ id,httpOptions);
   }
 
@@ -68,7 +69,7 @@ export class EmployeService {
     return this.httpClient.put("http://localhost:8087/user",data);
   }
 
-  public createEmploye(employe, fileImage:File) {
+  public createEmploye(employe: Employe, fileImage:File) {
 
     const data:FormData= new FormData();
     data.append('user',JSON.stringify(employe));

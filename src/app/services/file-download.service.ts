@@ -8,7 +8,7 @@ export class FileDownloadService {
 
   constructor(private http:HttpClient) { }
 
-  downloadFile(data) {
+  downloadFile(data: { filename?: any; fileName?: any; }) {
     const REQUEST_PARAMS = new HttpParams().set('fileName',data.fileName);
     const REQUEST_URI = '/server/download';
     return this.http.get(REQUEST_URI,{

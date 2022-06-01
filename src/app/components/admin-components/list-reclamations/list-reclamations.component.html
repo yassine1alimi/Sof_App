@@ -9,7 +9,9 @@
         <th>First name</th>
         <th>Last name</th>
         <th>email</th>
-        <th>CV</th>
+        <th>pj1</th>
+        <th>pj2</th>
+
         <th>action</th>
       </tr>
       </thead>
@@ -18,15 +20,20 @@
               <td>{{reclamationClient.prenom}}</td>
               <td>{{reclamationClient.nom}}</td>
               <td>{{reclamationClient.email}}</td>
-              <td>{{reclamationClient.pathCv}}
-                <a href="http://localhost:8087/downloadFile/{{reclamationClient.pj1}}"
-                class="cv"> <i class="fa fa-download"></i></a>
+              <td>{{reclamationClient.pj1}}
+                <a href="http://localhost:8087/file/download/{{reclamationClient.pj1}}"
+                class="pj1"> <i class="fa fa-download"></i></a>
+
+              </td>
+              <td>{{reclamationClient.pj2}}
+                <a href="http://localhost:8087/downloadFile/{{reclamationClient.pj2}}"
+                class="pj1"> <i class="fa fa-download"></i></a>
 
               </td>
               <td>
                 <button class="action-button btn-success" [routerLink]="['/profilClient', reclamationClient.idReclamation]"><mat-icon>remove_red_eye</mat-icon></button>
                 <button class="action-button btn-danger" (click)="deleteTodo(reclamationClient)"><mat-icon>delete_outline</mat-icon></button>
-                
+                <!--button class="bi bi-broadcast-pin" [routerLink]="['/profilClient', reclamationClient.idReclamation]"><mat-icon>affecter</mat-icon></button-->
               </td>
 
               <!-- <button mat-raised-button class="action-button btn-success" [routerLink]="['/profilEmploye', employe.idUser]"><mat-icon>

@@ -96,6 +96,13 @@ import { DemandeRequestEmployeComponent } from './components/employe-components/
 import { InfoReclamationClientComponent } from './components/client-components/info-reclamation-client/info-reclamation-client.component';
 import { ProfilClientComponent } from './components/admin-components/profil-client/profil-client.component';
 import { ListReclamationsComponent } from './components/admin-components/list-reclamations/list-reclamations.component';
+import { AddGroupeComponent } from './components/admin-components/groupe/add-groupe/add-groupe.component';
+import { AffecterGroupeADepartementComponent } from './components/admin-components/groupe/affecter-groupe-adepartement/affecter-groupe-adepartement.component';
+import { ListGroupeComponent } from './components/admin-components/groupe/list-groupe/list-groupe.component';
+import { AjouterDepartementComponent } from './components/admin-components/groupe/ajouter-departement/ajouter-departement.component';
+import { GroupeService } from './services/groupe.service';
+import { ListDepartementComponent } from './components/admin-components/groupe/list-departement/list-departement.component';
+import { DepartementService } from './services/departement.service';
 
 @NgModule({
   declarations: [
@@ -152,6 +159,11 @@ import { ListReclamationsComponent } from './components/admin-components/list-re
     InfoReclamationClientComponent,
     ProfilClientComponent,
     ListReclamationsComponent,
+    AddGroupeComponent,
+    AffecterGroupeADepartementComponent,
+    ListGroupeComponent,
+    AjouterDepartementComponent,
+    ListDepartementComponent,
     
     
    
@@ -204,9 +216,9 @@ import { ListReclamationsComponent } from './components/admin-components/list-re
   exports: [
     PieComponent
   ],
-  providers: [EmployeService,CandidateService,TodoService,EmailService,authInterceptorProviders,  { provide: MAT_DIALOG_DATA, useValue: {} },
+  providers: [EmployeService,CandidateService,TodoService,EmailService,authInterceptorProviders,GroupeService,DepartementService,  { provide: MAT_DIALOG_DATA, useValue: {} },
     { provide: MatDialogRef, useValue: {} }],
   bootstrap: [AppComponent,ListDemandesComponent],
-  entryComponents:[AjoutNoteComponent,AddTodoComponent,MeetingComponent,AcceptComponent,UpdateMeetingComponent]
+  entryComponents:[AjoutNoteComponent,AddTodoComponent,AddGroupeComponent,AjouterDepartementComponent,MeetingComponent,AcceptComponent,UpdateMeetingComponent]
 })
 export class AppModule { }

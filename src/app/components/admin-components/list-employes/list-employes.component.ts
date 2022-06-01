@@ -15,6 +15,8 @@ export class ListEmployesComponent implements OnInit {
   employe : Employe = new Employe();
   id : number; 
   employees: Employe[];
+  Employe: Employe = new Employe ; 
+
   p : number=1;
   constructor(private employeService:EmployeService,private router:Router, 
     private userService: UserService) { }

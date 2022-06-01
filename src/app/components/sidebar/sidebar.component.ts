@@ -15,6 +15,7 @@ export class SidebarComponent implements OnInit {
   isLoggedIn = false;
   showAdminBoard = false;
   showUserBoard = false;
+  showEmployeBoard = false;
   username: string;
   email : String ;
   employe : Employe = new Employe();
@@ -37,7 +38,7 @@ export class SidebarComponent implements OnInit {
 
       this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
       this.showUserBoard = this.roles.includes('ROLE_USER');
-      //this.showEmployeBoard = this.roles.includes('ROLE_EMPLOYE');
+      this.showEmployeBoard = this.roles.includes('ROLE_EMPLOYE');
 
 
       this.username = user.username;
