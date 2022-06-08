@@ -53,6 +53,13 @@ import { ArchivedEmployesComponent } from './components/admin-components/archive
 import{ListReclamationsComponent} from './components/admin-components/list-reclamations/list-reclamations.component'
 import { ListGroupeComponent } from './components/admin-components/groupe/list-groupe/list-groupe.component';
 import { ListDepartementComponent } from './components/admin-components/groupe/list-departement/list-departement.component';
+import { AddReclamationComponent } from './components/client-components/add-reclamation/add-reclamation.component';
+import { ListReclamations1Component } from './components/admin-components/reclamations/list-reclamations1/list-reclamations1.component';
+import { ReclamationRequestComponent } from './components/admin-components/reclamations/reclamation-request/reclamation-request.component';
+import { ClaimClientComponent } from './components/client-components/claim-client/claim-client.component';
+import { ClaimRequestClientComponent } from './components/client-components/claim-request-client/claim-request-client.component';
+import { ListClaimsComponent } from './components/admin-components/claims/list-claims/list-claims.component';
+import { CalimRequestComponent } from './components/admin-components/claims/calim-request/calim-request.component';
 
 //import { HomeComponent } from './home/home.component';
 //import { RegisterComponent } from './register/register.component';
@@ -79,7 +86,9 @@ const routes: Routes = [
   {path:'dashboard', component: DashboardComponent},
   {path:'profil', component: UpdateProfilComponent},
   { path: 'addEmploye', component: AddEmployeComponent },
-    { path: 'ajouter_demande', component: DemandeRequestEmployeComponent }, 
+    { path: 'ajouter_demande', component: DemandeRequestEmployeComponent },
+   { path: 'ajouter_claim', component: ClaimRequestClientComponent }, 
+ 
 
   
   { path: 'listEmployes', component: ListEmployesComponent },
@@ -95,6 +104,9 @@ const routes: Routes = [
   { path: 'updateTodo', component: UpdateTodoComponent },
   { path: 'profilClient/:id', component: ProfilClientComponent },
    { path: 'demandeRequest/:id', component: DemandeRequestComponent },
+   { path: 'claimRequest/:id', component: CalimRequestComponent },
+
+   { path: 'demandeReclamation/:id', component: ReclamationRequestComponent },
 
   { path: 'info-employe/:id', component: InfoEmployeComponent },
   
@@ -103,6 +115,8 @@ const routes: Routes = [
   { path: 'notesInternes', component: NotesInternesComponent },
   { path: 'employe-notesInternes', component: NotesInternesEmployeComponent },
     { path: 'history_requests', component: DemandeEmployeComponent },
+    { path: 'history_claims', component: ClaimClientComponent },
+
 
   { path: 'list-reclamations', component: ListReclamationsComponent },
 
@@ -110,6 +124,7 @@ const routes: Routes = [
   { path: 'timetracking', component: TimetrackingComponent },
   { path: 'meetings', component: ListMeetingComponent },
   { path: 'list-requests', component: ListDemandesComponent },
+  { path: 'list-claims' , component: ListClaimsComponent},
 
   { path: 'presence-calendar/:id', component: PresenceCalendarComponent },
   { path: 'presence', component: PresenceAdminComponent },
@@ -117,7 +132,10 @@ const routes: Routes = [
   
   { path: 'groupeList', component: ListGroupeComponent },
   { path: 'departementList', component: ListDepartementComponent },
+  { path: 'addreclamationcLIENT', component: AddReclamationComponent },
+  { path: 'list-reclamations1', component: ListReclamations1Component },
 
+  
 
  
   { path: 'footer', component: FooterComponent },

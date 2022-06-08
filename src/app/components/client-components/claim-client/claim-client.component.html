@@ -1,0 +1,36 @@
+
+<br _ngcontent-roy-c3="">
+     
+
+<div class ="topp">
+<h3><i class="fa fa-angle-right"></i> List of client's claims </h3>
+<div class="row justify-content-center">
+
+    <div class="col-md-6">
+<table class="table table-striped card-body text" style="padding-left:50%;padding-right:10%">
+
+    <thead class="thead-inverse">
+    <tr>
+      <th>created At</th>
+      <th>type</th>
+      <th>Description</th>
+      <th>Status</th>
+
+    </tr>
+    </thead>
+<!--{{claims|json}} -->
+    <tbody>
+        <tr *ngFor="let claim of claims" >
+            <td>{{claim.createdAt}}</td>
+            <td>{{claim.typeClaim}}</td>
+            <td>{{claim.description}}</td>
+            <td>{{claim.statusOfDemand}}</td>
+             
+        </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</div>
+
+

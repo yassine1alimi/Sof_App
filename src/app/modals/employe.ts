@@ -11,15 +11,11 @@ export class Employe {
 	public  ville : String;
     public  photo : String;
     public  status : String;
-   // public  cnss : String;
     public  departement : String;
     public  fonction : String;
     public  typeContrat : String;
     public  dateEntree : Date;
-   // public joursConges :number;
-    //public  soldeConges :number;
-    //public  coutHeuresSup : String;
-    //public  dureeConges : String;
+   
     public  salary : String;
     public username : String;
     public password : String;

@@ -1,0 +1,83 @@
+
+
+<h3><i class="fa fa-angle-right"></i> List of claims</h3>
+<div class="card-body bg-light">
+
+<table class="table table-striped">
+
+  <thead class="thead-inverse">
+  <tr>
+    <th></th>
+    <th> created date</th>
+    <th>email</th>
+    <th> type claim</th>
+    <th>action</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let claim of claims" >
+        <td><img src="D:\telechargement/PFE-project-master/PFE-project-master/Sof_App/src/assets/img/worker.png" alt="user" width="70" class="img-circle"></td>
+          <td>{{claim.createdAt}}</td>
+          <td>{{claim.description}}</td>
+          <td>{{claim.typeClaim}}</td>
+          
+          <td>
+           
+            <button class="action-button btn-success" [routerLink]="['/claimRequest', claim.idClaim]"><mat-icon>remove_red_eye</mat-icon></button>
+            <button class="action-button btn-danger" (click)="onDeleteClaim(claim.idClaim)"><mat-icon>delete_outline</mat-icon></button>
+          </td>
+
+         
+      </tr>
+  </tbody>
+</table>
+</div>
+
+
+<!--
+<h3><i class="fa fa-angle-right"></i> List of claims</h3>
+  
+  <div>
+    
+        <div >
+          <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchText"/> 
+        </div>
+      
+  <table class="table table-striped">
+
+    <thead class="thead-inverse">
+    <tr>
+      <th></th>
+    <th> created date</th>
+    <th>description</th>
+    <th> type claim</th>
+    <th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let claim of claims" | filter:searchText | paginate: {itemsPerPage: 4, currentPage: p}" >
+          <td><img src="D:\telechargement/PFE-project-master/PFE-project-master/Sof_App/src/assets/img/worker.png" alt="user" width="70" class="img-circle"></td>
+          <td>{{claim.createdAt}}</td>
+          <td>{{claim.description}}</td>
+          <td>{{claim.typeClaim}}</td>
+             
+          <td>
+     
+            <button class="action-button btn-success" [routerLink]="['/claimRequest', claim.idClaim]"><mat-icon>remove_red_eye</mat-icon></button>
+            <button class="action-button btn-danger" (click)="onDeleteClaim(claim.idClaim)"><mat-icon>delete_outline</mat-icon></button>
+         
+          </td>
+
+           
+        </tr>
+    </tbody>
+    
+  </table>
+  <div class="pagination">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+</div>
+
+-->
+
+

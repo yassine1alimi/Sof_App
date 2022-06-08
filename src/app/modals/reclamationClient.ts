@@ -1,8 +1,11 @@
+import { User } from './user';
 export class ReclamationClient {
     idReclamation:number;
 	  prenom:String;
+	  typeClaim:String;
+	  description:String;
 	  nom:String;
-      dateOfBirth:Date;
+      dateReclamation:Date;
 	  phone:String;
 	  email:String;
 	  cin:String;
@@ -14,5 +17,6 @@ export class ReclamationClient {
 	  pj2 :String;
 	 
 	  archived :Boolean; 
-	
+	  idUser:number;
+	  user: User;
 }

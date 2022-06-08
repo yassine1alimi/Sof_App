@@ -6,22 +6,24 @@
   
       <thead class="thead-inverse">
       <tr>
-        <th>First name</th>
-        <th>Last name</th>
         <th>email</th>
-        <th>pj1</th>
-        <th>pj2</th>
+        <th>Type of claim</th>
+        <th>date_Claim</th>
+        
+        <!--th>pj1</th-->
+        <th>pj</th>
 
         <th>action</th>
       </tr>
       </thead>
       <tbody>
           <tr *ngFor="let reclamationClient of listReclamations | paginate: {itemsPerPage: 4, currentPage: p}" >
-              <td>{{reclamationClient.prenom}}</td>
-              <td>{{reclamationClient.nom}}</td>
-              <td>{{reclamationClient.email}}</td>
+            <td>{{reclamationClient.email}}</td>
+            <td>{{reclamationClient.typeClaim}}</td>
+              <!--td>{{reclamationClient.date_reclamation}}</td>
+              -->
               <td>{{reclamationClient.pj1}}
-                <a href="http://localhost:8087/file/download/{{reclamationClient.pj1}}"
+                <a href="http://localhost:8087/downloadFile/{{reclamationClient.pj1}}"
                 class="pj1"> <i class="fa fa-download"></i></a>
 
               </td>

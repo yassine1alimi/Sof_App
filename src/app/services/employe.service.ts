@@ -43,7 +43,7 @@ export class EmployeService {
 
   public generateReport(id: number){
     
-    return this.httpClient.get<any>("http://localhost:8087/report/pdf"+"/"+ id, httpOptions);
+    return this.httpClient.get<any>("http://localhost:8087/report/pdf/"+ id, httpOptions);
   }
 
   public deleteEmployeById (id: number)  {
@@ -75,7 +75,7 @@ export class EmployeService {
     data.append('user',JSON.stringify(employe));
     data.append('image',fileImage);
     
-    return this.httpClient.post<Employe>("http://localhost:8087/createEmploye", data);
+    return this.httpClient.post<Employe>("http://localhost:8087/employees/create", data, httpOptions);
   }
 
   setter(employe:Employe){

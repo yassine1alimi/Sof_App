@@ -1,3 +1,4 @@
+/*
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
 *{
  margin:0;
@@ -75,4 +76,17 @@ h3 {
     font-size: 15px;
 }
 
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
 
+
+.btn-meeting{
+    background-color: #337ab7;
+    left: 35%; 
+    width: 30%;
+    height: 28px;
+    border-radius: 5px 5px;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}

@@ -38,13 +38,13 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="col-sm-2 col-sm-2 control-label">Date of birth</label>
+            <label class="col-sm-2 col-sm-2 control-label">Date of claim</label>
             <div class="col-sm-10">
-              <input type="date" [(ngModel)]="reclamation.dateOfBirth" class="form-control" name="dateOfBirth" id="dateOfBirth" placeholder=""
+              <input type="date" [(ngModel)]="reclamation.dateReclamation" class="form-control" name="dateReclamation" id="dateReclamation" placeholder=""
               required
-          #dateOfBirth="ngModel"
-          [class.is-invalid]="dateOfBirth.invalid && dateOfBirth.touched">
-          <small class="text-danger" [class.d-none]="dateOfBirth.valid || dateOfBirth.untouched" style="font-size: 11px;">Date of birth is required</small>
+          #dateReclamation="ngModel"
+          [class.is-invalid]="dateReclamation.invalid && dateReclamation.touched">
+          <small class="text-danger" [class.d-none]="dateReclamation.valid || dateReclamation.untouched" style="font-size: 11px;">Date of birth is required</small>
             </div>
           </div>
           <div class="form-group">
@@ -76,7 +76,19 @@
           </div>
             </div>
           </div>
-
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Type claim</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="reclamation.typeClaim" class="form-control" name="typeClaim" id="typeClaim" placeholder=""
+              minlength="3" [class.is-invalid]="typeClaim.invalid && typeClaim.touched"
+               #typeClaim="ngModel" required>
+               <div *ngIf="typeClaim.errors && (typeClaim.invalid || typeClaim.touched)">
+                <small class="text-danger" *ngIf="typeClaim.errors.required" [class.d-none]=" typeClaim.untouched" style="font-size: 11px;"> typeClaim is required</small>
+                <small class="text-danger" *ngIf="typeClaim.errors.minlength" [class.d-none]=" typeClaim.untouched" style="font-size: 11px;"> typeClaim must be at least 3 characters</small>
+                
+              </div>
+            </div>
+          </div>
           <div class="form-group">
             <label class="col-sm-2 col-sm-2 control-label">File1</label>
             <div class="col-sm-10">
@@ -103,7 +115,7 @@
         </form>
         
       </div>
-      <button type="button" class="btn-save" style="margin-left: 200px"(click)="createCandidate()">Save</button>
+      <button type="button" class="btn-save" style="margin-left: 200px"(click)="createreclamation()">Save</button>
 
     </div>
     

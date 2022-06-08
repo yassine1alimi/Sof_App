@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   
 
   constructor(){}
-  title = 'sofrecomProject';
+  title = 'managementProject';
   ngOnInit() {
     
   }

@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <label for="fname">Date de naissance</label>
-                        <input type="text" name="dateOfBirth" class="form-control" [(ngModel)]="employe.dateOfBirth">
+                        <input type="date" name="dateOfBirth" class="form-control" [(ngModel)]="employe.dateOfBirth">
                     </div>
 
                     <div class="col-lg-6">
@@ -77,21 +77,18 @@
                 
 
                 <div class="row">
-                    <div class="col-lg-6">
-                        <label for="fname">Type du contrat</label>
-                        <input type="text" name="typeContrat" class="form-control" [(ngModel)]="employe.typeContrat">
-                    </div>
 
                     <div class="col-lg-6">
                         <label for="fname">Salaire</label>
                         <input type="text" name="salary" class="form-control" [(ngModel)]="employe.salary">
                     </div>
+                    <div>
+                        <label for="fname">Date d'entrée</label>
+                        <input type="date" name="dateEntree" class="form-control" [(ngModel)]="employe.dateEntree">
+                    </div>
                 </div>
 
                 
-                <label for="fname">Date d'entrée</label>
-                <input type="date" name="dateEntree" class="form-control" [(ngModel)]="employe.dateEntree">
-
                 
                     
                 <br>

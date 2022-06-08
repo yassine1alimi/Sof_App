@@ -44,7 +44,7 @@ export class InfoReclamationClientComponent implements OnInit {
 
    
 
-  createCandidate() {
+     createreclamation() {
     this.reclamationService.createReclamationClient(this.reclamation,this.pj1,this.pj2)
       .subscribe(  data => {
         alert("reclamation created successfully");

@@ -103,6 +103,14 @@ import { AjouterDepartementComponent } from './components/admin-components/group
 import { GroupeService } from './services/groupe.service';
 import { ListDepartementComponent } from './components/admin-components/groupe/list-departement/list-departement.component';
 import { DepartementService } from './services/departement.service';
+import { AddReclamationComponent } from './components/client-components/add-reclamation/add-reclamation.component';
+import { ListReclamations1Component } from './components/admin-components/reclamations/list-reclamations1/list-reclamations1.component';
+import { ReclamationRequestComponent } from './components/admin-components/reclamations/reclamation-request/reclamation-request.component';
+import { ClaimClientComponent } from './components/client-components/claim-client/claim-client.component';
+import { ClaimRequestClientComponent } from './components/client-components/claim-request-client/claim-request-client.component';
+import { ListClaimsComponent } from './components/admin-components/claims/list-claims/list-claims.component';
+import { CalimRequestComponent } from './components/admin-components/claims/calim-request/calim-request.component';
+import { AddTimesheetComponent } from './components/admin-components/add-timesheet/add-timesheet.component';
 
 @NgModule({
   declarations: [
@@ -164,6 +172,14 @@ import { DepartementService } from './services/departement.service';
     ListGroupeComponent,
     AjouterDepartementComponent,
     ListDepartementComponent,
+    AddReclamationComponent,
+    ListReclamations1Component,
+    ReclamationRequestComponent,
+    ClaimClientComponent,
+    ClaimRequestClientComponent,
+    ListClaimsComponent,
+    CalimRequestComponent,
+    AddTimesheetComponent,
     
     
    
@@ -210,7 +226,8 @@ import { DepartementService } from './services/departement.service';
     Ng2SearchPipeModule,
     NgxPaginationModule,
     EditorModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+  
   ],
 
   exports: [
@@ -218,7 +235,7 @@ import { DepartementService } from './services/departement.service';
   ],
   providers: [EmployeService,CandidateService,TodoService,EmailService,authInterceptorProviders,GroupeService,DepartementService,  { provide: MAT_DIALOG_DATA, useValue: {} },
     { provide: MatDialogRef, useValue: {} }],
-  bootstrap: [AppComponent,ListDemandesComponent],
+  bootstrap: [AppComponent,ListDemandesComponent,ListClaimsComponent],
   entryComponents:[AjoutNoteComponent,AddTodoComponent,AddGroupeComponent,AjouterDepartementComponent,MeetingComponent,AcceptComponent,UpdateMeetingComponent]
 })
 export class AppModule { }

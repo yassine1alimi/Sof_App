@@ -1,0 +1,118 @@
+
+  <div class="container" >
+
+   
+
+
+    <div class="left"> 
+        <img src="http://localhost:8087/avatar/{{claim.idUser}}" alt="user" width="150" class="img-circle">
+        <br>
+        <br>
+        <h4>{{client.prenom}} {{client.nom}} </h4>
+        <p>{{client.email}}</p>
+    
+      </div>
+    
+    <div class="right">
+        <h5><i class="fa fa-angle-right"></i> Request for a claim</h5>
+        <br>
+        <br>
+        <div class="info">
+              
+          <div class="info_data">
+                
+              <div class="data">
+                <h4>Type of claim
+                <p> {{claim.typeClaim}}</p> </h4>
+            </div>
+          </div>
+          <div class="info_data">
+              <div class="data">
+                <h4>created day</h4>
+                <p> {{claim.createdAt}}</p>
+            </div>
+            <div class="data">
+              <h4>type claim</h4>
+              <p> {{claim.typeClaim}}</p>
+            </div>
+          </div>
+            
+            <br>
+            <br>
+            <div class="info_data">
+            <button class="btnS" data-toggle="modal1" data-target="#myModal1"
+                (click)="showModal1=true">Accept</button>
+    
+                <div id="myModal1" class="modal fade" role="dialog" [ngClass]="{'show':showModal1}">
+                  <div class="modal-dialog">
+                
+                    
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" (click)="showModal1=false">&times;</button>
+                        <h4 class="modal-title"></h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>Do you want to agree to assign the claim?</p>
+                      </div>
+                      <div class="modal-footer">
+                        <div>
+                         
+                        <button type="button" class="btn btn-default" data-dismiss="modal"
+                        (click)="onAcceptClaim()"(click)="showModal1=false">Accept</button>
+                    
+                        <button type="button" class="btn btn-default" data-dismiss="modal"
+                        (click)="showModal1=false">Cancel</button>
+                      </div>
+                      </div>
+                    </div>
+    
+                    
+                
+                  </div>
+                </div>
+    
+    
+            <button class="btnS" data-toggle="" data-target=""
+            (click)="showModal2=true">Refuse</button>
+    
+            <div id="myModal2" class="modal fade" role="dialog" [ngClass]="{'show':showModal2}">
+              <div class="modal-dialog">
+            
+                
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" (click)="showModal2=false">&times;</button>
+                    <h4 class="modal-title"></h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Do you want to refuse to assign the claim</p>
+                  </div>
+                  <div class="modal-footer">
+                    <div>
+                     
+                    <button type="button" class="btn btn-default" data-dismiss="modal"
+                    (click)="onRefuseClaim()"(click)="showModal2=false">Refuse</button>
+                
+                    <button type="button" class="btn btn-default" data-dismiss="modal"
+                    (click)="showModal2=false">Cancel</button>
+                  </div>
+                  </div>
+                </div>
+            
+              </div>
+            </div>
+    
+            </div>
+          
+    
+            
+        </div>
+      </div>
+                
+      
+        
+            
+        
+      </div>
+

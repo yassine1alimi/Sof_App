@@ -23,7 +23,7 @@ h2{
 .container .left{
     width: 40%;
     
-    background: rgb(122, 133, 133);
+    background: rgb(179, 233, 234);
      padding: 30px 25px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -54,7 +54,7 @@ h3 {
 }
 
 .btnS{
-    background-color: #4ECDC4;
+    background-color: #0af081;
    
     margin: 10px;
     top:80%;

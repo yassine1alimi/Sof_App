@@ -24,6 +24,15 @@ export class ReclamationClientService {
 
     return this.httpClient.post<ReclamationClient>("http://localhost:8087/createreclamationClient", data);
   }
+  public createReclamationClient1(reclamationClient: ReclamationClient, pj1:File, pj2:File, id:number) {
+
+    const data:FormData= new FormData();
+    data.append('reclamationClient',JSON.stringify(reclamationClient));
+    data.append('pj1',pj1);
+    data.append('pj2',pj2);
+
+    return this.httpClient.post<ReclamationClient>("http://localhost:8087/createreclamationClient1?id="+id, data);
+  }
 
   public getReclamationClientsList(){
     console.log('test');
@@ -52,7 +61,7 @@ export class ReclamationClientService {
       
   }
 
-  toastMessage(message){
+  toastMessage(message: string){
     this._snackbar.open(message, 'Close', {
       duration: 10000,
       horizontalPosition: 'right',
@@ -60,11 +69,29 @@ export class ReclamationClientService {
      })
   }
 
-  
+  getReclamationClientsList1(){
+    return this.httpClient.get<ReclamationClient>("http://localhost:8087/reclamationClients_attente",httpOptions);
+  }
 
-/*
-  saveUserProfile(formData: FormData){
-    return this.httpClient.post("http://localhost:8080/candidats/create", formData);
-    
-  }*/
+  getReclamationClientsOfUser(id:number){
+    return this.httpClient.get<any>("http://localhost:8087/reclamationClientUser/"+id,httpOptions);
+  }
+
+
+
+  acceptReclamationClient(id: number) {
+    return this.httpClient.get<any>("http://localhost:8087/accepterReclamation?id="+id,httpOptions);
+
+  }
+  refuseReclamationClient(id: number){
+    return this.httpClient.get<any>("http://localhost:8087/refuserReclamation?id="+id,httpOptions);
+  }
+
+  deleteReclamationClient1(id:number){
+    return this.httpClient.delete("http://localhost:8087/deleteReclamationClient/"+id);
+  }
+
+
+
+
 }

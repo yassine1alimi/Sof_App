@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Departement } from '../modals/departement';
 import { Groupe } from '../modals/groupe';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' , 'Access-Control-Allow-Origin':'*',
@@ -31,5 +32,7 @@ export class GroupeService {
       
   }
 
+
+  
 
 }

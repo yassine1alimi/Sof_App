@@ -1,4 +1,3 @@
-  
   <div>
     <section id="container">
      
@@ -19,7 +18,7 @@
           <a><img src="../../../assets/img/avatar.jpg" class="img-circle" width="80" routerLink ="/profil" *ngIf="!img"></a></p>
         <h5 class="centered"><h2>{{username}}</h2></h5>
 
-        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showEmployeBoard && showAdminBoard"  >
+        <li class="sub-menu dcjq-parent-li"   >
           <a routerLink ="/dashboard" >
             <i class="fa fa-tachometer" aria-hidden="true"></i>
             <span>Dashboard</span>
@@ -79,6 +78,29 @@
           </mat-expansion-panel>
         </mat-accordion>
 
+
+        <!--mat-accordion class="sidebar" routerLinkActive = "active" *ngIf="showAdminBoard" >
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title style="margin-left: -7%;margin-bottom: -3px;">
+                <i class="fa fa-desktop"></i>  <span style="margin-left: 7px;">Reclamations</span>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+        
+            <div class="vacation-sub-menu">
+              <li><a style= "margin-bottom:-10px"routerLink ="/bilan-demandes"><i class="fa fa-book"></i> status of claims</a></li>
+              <li><a routerLink ="/list-reclamations1"><i class="fa fa-edit"></i>reclamation en attente</a></li>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion-->
+
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard"> <!--*ngIf="showAdminBoard"-->
+          <a href="javascript:;">
+            <i class="fa fa-group"></i>
+            <span routerLink ="/list-claims">Claims</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
         
         <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard"> <!--*ngIf="showAdminBoard"-->
           <a href="javascript:;">
@@ -232,7 +254,21 @@
             <span class="dcjq-icon"></span></a>
     
         </li>
-
+<mat-accordion class="sidebar" routerLinkActive = "active" *ngIf="showUserBoard" >
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title style="margin-left: -7%;margin-bottom: -3px;">
+                <i class="fa fa-desktop"></i> <span style="margin-left: 7px;">reclamations</span> 
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+        
+            <div class="vacation-sub-menu">
+              <li><a routerLink ="/ajouter_claim">Add claim</a></li>
+              <li><a routerLink ="/history_claims">My claims</a></li>
+              
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
         
       </ul>
       <!-- sidebar menu end-->
