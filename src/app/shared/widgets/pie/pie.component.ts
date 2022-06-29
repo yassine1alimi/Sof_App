@@ -32,7 +32,7 @@ export class PieComponent implements OnInit {
          
         },
         title: {
-          text: "Number of claims by type"
+          text: "Number of claims by Status"
         },
         tooltip: {
           pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'

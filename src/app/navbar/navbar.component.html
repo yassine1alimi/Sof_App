@@ -1,11 +1,11 @@
 
  <!--header start-->
- <header class="header black-bg">
+ <div class="header nav-bg">
   <div class="sidebar-toggle-box">
     <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
   </div>
   <!--logo start-->
-  <a href="index.html" class="logo"><b>SOFRE<span>COM</span></b></a>
+  <a href="index.html" class="logo"><img src="./../../../assets/img/logo-sofrecom.png" alt=" sofrecom" width="50%"></a>
   <!--logo end-->
 
   <div class="nav notify-row" id="top_menu">
@@ -43,8 +43,8 @@
    
 
     <ul class="nav pull-right top-menu" *ngIf="isLoggedIn">
-      <li><a class="logout" (click)="logout()">Logout</a></li>
+      <li><a class="logout" (click)="logout()"> <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
     </ul>
   </div>
-</header>
+</div>
 <!--header end-->

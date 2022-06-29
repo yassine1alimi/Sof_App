@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Caisse } from '../modals/caisse';
+//import { Caisse } from '../modals/store';
 
 @Injectable({
   providedIn: 'root'

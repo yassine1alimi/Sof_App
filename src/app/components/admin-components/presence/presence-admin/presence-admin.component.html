@@ -1,6 +1,6 @@
 
-<h3><i class="fa fa-angle-right"></i> Timetracking</h3>
-
+<h3 class="title-body">Timetracking</h3>
+<hr width="60%" style="text-align: left; margin-bottom: 50px;  color: #535456;">
   
 
 <div>
@@ -9,12 +9,14 @@
     <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchText"/> 
   </div>
 
-  <table class="table table-striped" width="100px">
+  <table class="table table-striped" >
 
     <thead>
     <tr>
-      <th></th>
-      <th></th>
+      <th>Image</th>
+      <th>Nom & prénom</th>
+      <th>Fonction</th>
+      <th>Département</th>
      
       </tr>
     </thead>
@@ -23,7 +25,11 @@
           <td><img src="http://localhost:8087/avatar/{{employe.idUser}}" alt="user" 
             width="80" class="img-circle" [routerLink]="['/presence-calendar', employe.idUser]">
           </td>
-          <td> {{employe.prenom}} {{employe.nom}} </td> 
+          <td> {{employe.prenom}} {{employe.nom}}    </td>
+           <td> {{employe.fonction}}  </td> 
+           <td> {{employe.departement}}  </td> 
+
+
             
 
            

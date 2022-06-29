@@ -111,6 +111,8 @@ import { ClaimRequestClientComponent } from './components/client-components/clai
 import { ListClaimsComponent } from './components/admin-components/claims/list-claims/list-claims.component';
 import { CalimRequestComponent } from './components/admin-components/claims/calim-request/calim-request.component';
 import { AddTimesheetComponent } from './components/admin-components/add-timesheet/add-timesheet.component';
+import { ChatComponent } from './components/forum-components/chat/chat.component';
+import { ForumComponent } from './components/forum-components/forum/forum.component';
 
 @NgModule({
   declarations: [
@@ -180,6 +182,8 @@ import { AddTimesheetComponent } from './components/admin-components/add-timeshe
     ListClaimsComponent,
     CalimRequestComponent,
     AddTimesheetComponent,
+    ChatComponent,
+    ForumComponent,
     
     
    

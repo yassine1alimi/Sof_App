@@ -1,4 +1,4 @@
-<h3><i class="fa fa-angle-right"></i> List of reclamationClients</h3>
+<h3> List of reclamationClients</h3>
 <div _ngcontent-roy-c3="" class="card-body bg-light">
    
    
@@ -7,33 +7,33 @@
       <thead class="thead-inverse">
       <tr>
         <th>email</th>
-        <th>Type of claim</th>
-        <th>date_Claim</th>
+        <th>Type Récalamation</th>
+        <th>Date Réclamation</th>
         
         <!--th>pj1</th-->
         <th>pj</th>
 
-        <th>action</th>
+        <th></th>
       </tr>
       </thead>
       <tbody>
           <tr *ngFor="let reclamationClient of listReclamations | paginate: {itemsPerPage: 4, currentPage: p}" >
             <td>{{reclamationClient.email}}</td>
             <td>{{reclamationClient.typeClaim}}</td>
-              <!--td>{{reclamationClient.date_reclamation}}</td>
-              -->
-              <td>{{reclamationClient.pj1}}
+             <td>{{reclamationClient.dateReclamation}}</td>
+            
+              <td>
                 <a href="http://localhost:8087/downloadFile/{{reclamationClient.pj1}}"
-                class="pj1"> <i class="fa fa-download"></i></a>
-
-              </td>
-              <td>{{reclamationClient.pj2}}
-                <a href="http://localhost:8087/downloadFile/{{reclamationClient.pj2}}"
-                class="pj1"> <i class="fa fa-download"></i></a>
+                class="pj1">{{reclamationClient.pj1}} <i class="fa fa-download"></i></a>
+          <br>
+              
+                <a href="http://localhost:8087/downloadFile/{{reclamationClient.pj2}}" 
+                class="pj1">{{reclamationClient.pj2}} <i class="fa fa-download"></i></a>
 
               </td>
               <td>
                 <button class="action-button btn-success" [routerLink]="['/profilClient', reclamationClient.idReclamation]"><mat-icon>remove_red_eye</mat-icon></button>
+                <button class="action-button btn-primary" [routerLink]="['/addtimesheet', reclamationClient.idReclamation] "><mat-icon> attach_file</mat-icon></button>
                 <button class="action-button btn-danger" (click)="deleteTodo(reclamationClient)"><mat-icon>delete_outline</mat-icon></button>
                 <!--button class="bi bi-broadcast-pin" [routerLink]="['/profilClient', reclamationClient.idReclamation]"><mat-icon>affecter</mat-icon></button-->
               </td>

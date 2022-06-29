@@ -30,7 +30,7 @@ export class AddReclamationComponent implements OnInit {
 
 
   createreclamation1():void {
-    this.reclamationClientService.createReclamationClient1(this.reclamationClient,this.pj1,this.pj2,this.id)
+    this.reclamationClientService.createReclamationClient(this.reclamationClient,this.pj1,this.pj2)
     .subscribe( data => {
       this.userService.toastMessage("claim created successfully")
      },(error) => {

@@ -17,8 +17,8 @@ export class TimesheetService {
 
 public ajouterTimesheet(idReclamation:number,idUser:number,dated:Date,datef:Date): Observable<any>{
   const data:FormData= new FormData();
-
-  return this.httpClient.post<any>(`$http://localhost:8087/ajouterTimesheet/${idReclamation}/${idUser}/${dated}/${datef}`, { observe: 'response' });
+console.log(`http://localhost:8087/ajouterTimesheet/${idReclamation}/${idUser}/${dated}/${datef}`);
+  return this.httpClient.post<any>(`http://localhost:8087/ajouterTimesheet/${idReclamation}/${idUser}/${dated}/${datef}`, { observe: 'response' });
 
 
 }

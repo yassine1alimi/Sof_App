@@ -1,6 +1,7 @@
 import { HttpClient , HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Claim } from '../modals/claim';
+import 'rxjs/add/operator/map'
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' , 'Access-Control-Allow-Origin':'*',
 })

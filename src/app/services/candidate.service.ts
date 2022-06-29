@@ -56,9 +56,10 @@ export class CandidateService {
 
   toastMessage(message){
     this._snackbar.open(message, 'Close', {
-      duration: 10000,
+      duration: 1000,
       horizontalPosition: 'right',
-      verticalPosition: 'bottom',
+      verticalPosition: 'top',
+      
      })
   }
 

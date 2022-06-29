@@ -30,8 +30,8 @@ body{
 
 .wrapper .left{
         width: 30%;
-        
-        background: #4ECDC4;
+        background: rgb(255,151,40);
+        background: linear-gradient(25deg, rgba(255,151,40,1) 0%, rgba(17,197,187,1) 69%, rgba(2,103,173,1) 100%);
          padding: 30px 25px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
@@ -138,7 +138,7 @@ h4{
 
 img{
   margin-top: 24%;
-  margin-right: 600px;
+ 
   padding-bottom: 1px;
 }
 

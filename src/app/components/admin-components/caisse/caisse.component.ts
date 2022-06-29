@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Caisse } from 'src/app/modals/caisse';
+//import { Caisse } from 'src/app/modals/store';
 import { CaisseService } from 'src/app/services/caisse.service';
 import { UserService } from 'src/app/services/user.service';
 import { TokenStorageService } from 'src/app/services/token-storage.service';

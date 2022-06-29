@@ -216,14 +216,14 @@ hr {
 }
 
 ul.top-menu > li > .logout {
-	color: #f2f2f2;
-	font-size: 12px;
+	color: #ff9728;
+	font-size: 18px;
+    font-weight: 600;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
-	border: 1px solid #64c3c2 !important;
-	padding: 5px 15px;
+	border: 1px solid #ff9728 !important;
+	padding: 5px 5px;
 	margin-right: 15px;
-	background: #4ECDC4;
 	margin-top: 15px;
 }
 
@@ -234,7 +234,7 @@ ul.top-menu > li > .logout {
     width: 210px;
     height: 100%;
     position: fixed;
-    background: #2f323a;
+    background: #f1f5f8;
 }
 
 #sidebar h5 {
@@ -318,7 +318,7 @@ ul.sidebar-menu li ul.sub li a {
     -o-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    color: #aeb2b7;
+    color: #535456;
 }
 
 ul.sidebar-menu li ul.sub li a:hover {
@@ -352,11 +352,12 @@ ul.sidebar-menu li a span{
 }
 
 ul.sidebar-menu li a{
-    color: #aeb2b7;
+    color: #535456;
     text-decoration: none;
     display: block;
     padding: 15px 0 15px 10px;
-    font-size: 12px;
+    font-size: 14px;
+
     outline: none;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -366,7 +367,7 @@ ul.sidebar-menu li a{
 }
 
 ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
-    background: #4ECDC4;
+    background: #ff9728;
     color: #fff;
     display: block;
 
@@ -1962,10 +1963,13 @@ ul li {
 }
 
 .form-login h2.form-login-heading {
+    font-weight: 600;
 	margin: 0;
 	padding: 25px 20px;
 	text-align: center;
-	background: #4ecdc4;
+	/*background: #4ecdc4;*/
+    background: rgb(255,151,40);
+    background: linear-gradient(90deg, rgba(255,151,40,1) 0%, rgba(17,197,187,1) 69%, rgba(2,103,173,1) 100%);
 	border-radius: 5px 5px 0 0;
 	-webkit-border-radius: 5px 5px 0 0;
 	color: #fff;
@@ -3500,3 +3504,10 @@ p {
 }
 
 
+
+.thead-inverse th{
+    background-color: #ff9728 !important;
+}
+.table{
+    font-size:13px;
+}

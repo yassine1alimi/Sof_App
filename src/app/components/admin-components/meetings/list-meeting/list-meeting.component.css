@@ -81,11 +81,11 @@ h3 {
 
 
 .btn-meeting{
-    background-color: #337ab7;
+    background-color: #ff9728;
     left: 35%; 
     width: 30%;
     height: 28px;
-    border-radius: 5px 5px;
+    border-radius: 2px;
     color:white;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;

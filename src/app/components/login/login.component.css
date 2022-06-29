@@ -1,11 +1,16 @@
 .btn-theme {
     color: #fff;
-    background-color: #4ECDC4;
+    font-weight: 600;
+    background: rgb(255,151,40);
+    background: linear-gradient(90deg, rgba(255,151,40,1) 0%, rgba(17,197,187,1) 69%, rgba(2,103,173,1) 100%);
     border-color: #48bcb4;
 }
 .btn-block {
     display: block;
     width: 100%;
+}
+.logo{
+    margin: 10px auto !important;
 }
 .checkbox, .radio {
     position: relative;

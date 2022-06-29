@@ -60,6 +60,9 @@ import { ClaimClientComponent } from './components/client-components/claim-clien
 import { ClaimRequestClientComponent } from './components/client-components/claim-request-client/claim-request-client.component';
 import { ListClaimsComponent } from './components/admin-components/claims/list-claims/list-claims.component';
 import { CalimRequestComponent } from './components/admin-components/claims/calim-request/calim-request.component';
+import { AddTimesheetComponent } from './components/admin-components/add-timesheet/add-timesheet.component';
+import { ChatComponent } from './components/forum-components/chat/chat.component';
+import { ForumComponent } from './components/forum-components/forum/forum.component';
 
 //import { HomeComponent } from './home/home.component';
 //import { RegisterComponent } from './register/register.component';
@@ -111,6 +114,7 @@ const routes: Routes = [
   { path: 'info-employe/:id', component: InfoEmployeComponent },
   
   { path: 'bilan-demandes', component: BilanDemandesComponent },
+  {path:'addtimesheet/:idReclamation',component:AddTimesheetComponent},
 
   { path: 'notesInternes', component: NotesInternesComponent },
   { path: 'employe-notesInternes', component: NotesInternesEmployeComponent },
@@ -136,6 +140,8 @@ const routes: Routes = [
   { path: 'list-reclamations1', component: ListReclamations1Component },
 
   
+  {path:"chat",component:ChatComponent},
+  {path:"forum",component:ForumComponent},
 
  
   { path: 'footer', component: FooterComponent },

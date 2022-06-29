@@ -11,20 +11,17 @@ export class User {
 	public  ville : String;
     public  photo : String;
     public  status : String;
-   // public  cnss : String;
     public  departement : String;
     public  fonction : String;
     public  typeContrat : String;
     public  dateEntree : Date;
     public  coutHeuresSup : String;
     public  dureeConges : number;
-    //public  soldeConges :number;
-   // public joursConges :number;
+    
     public  salary : String;
     public username : String;
     public password : String;
     public repassword : String;
-    //public budget : number;
     
 
 }

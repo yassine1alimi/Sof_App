@@ -36,7 +36,7 @@ export class ReclamationClientService {
 
   public getReclamationClientsList(){
     console.log('test');
-    return this.httpClient.get<any>("http://localhost:8087/ReclamationClients",httpOptions);
+    return this.httpClient.get<ReclamationClient>("http://localhost:8087/ReclamationClients",httpOptions);
   }
 
   public getReclamationClient(id: number){
@@ -70,7 +70,7 @@ export class ReclamationClientService {
   }
 
   getReclamationClientsList1(){
-    return this.httpClient.get<ReclamationClient>("http://localhost:8087/reclamationClients_attente",httpOptions);
+    return this.httpClient.get<any>("http://localhost:8087/reclamationClients_attente",httpOptions);
   }
 
   getReclamationClientsOfUser(id:number){

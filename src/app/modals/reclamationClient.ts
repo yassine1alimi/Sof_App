@@ -15,7 +15,7 @@ export class ReclamationClient {
       password:String;
       pj1 :string;
 	  pj2 :String;
-	 
+	
 	  archived :Boolean; 
 	  idUser:number;
 	  user: User;

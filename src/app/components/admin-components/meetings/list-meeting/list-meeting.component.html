@@ -4,21 +4,22 @@
     
     <br _ngcontent-roy-c3="">
     
-    <button _ngcontent-roy-c3="" class="btn-meeting" type="submit" style="margin-left: 30%; width: 30%;" (click)="onAddNote()">Add a meeting</button>
-    <br><br><br>
+   
 
 
     <div class="row justify-content-center">
         <div class="col-md-10">
-    <table class="table table-striped card-body text" style="padding-left:50%;padding-right:10%">
+            <button _ngcontent-roy-c3="" class="btn-meeting" type="submit" style="" (click)="onAddNote()">Add a meeting</button>
+            <br><br><br>
+    <table class="table  card-body text" style="padding-left:50%;padding-right:10%">
     
         <thead class="thead-inverse">
         <tr>
-          <th>title</th>
-          <th>type</th>
-          <th>meeting Day</th>
-          <th>meeting Time</th>
-          <th>Action</th>
+          <th>Titre</th>
+          <th>Type</th>
+          <th>Jour Meeting</th>
+          <th>Heure Meeting</th>
+          <th></th>
         </tr>
         </thead>
         <tbody>
@@ -30,7 +31,7 @@
                 
                 <td>
                     <div class="container" >
-                    <button class="action-button btn-primary" (click)="updateMeeting(meeting)"><mat-icon>edit</mat-icon></button>
+                    <button class="action-button btn-warning" (click)="updateMeeting(meeting)"><mat-icon>edit</mat-icon></button>
                     <button class="action-button btn-danger" (click)="deleteMeeting(meeting)"><mat-icon>delete_outline</mat-icon></button>
                     </div>
 

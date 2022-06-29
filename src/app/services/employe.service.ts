@@ -75,7 +75,7 @@ export class EmployeService {
     data.append('user',JSON.stringify(employe));
     data.append('image',fileImage);
     
-    return this.httpClient.post<Employe>("http://localhost:8087/employees/create", data, httpOptions);
+    return this.httpClient.post<Employe>("http://localhost:8087/employees/create", data);
   }
 
   setter(employe:Employe){

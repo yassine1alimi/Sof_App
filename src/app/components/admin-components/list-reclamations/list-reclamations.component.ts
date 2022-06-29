@@ -15,8 +15,8 @@ export class ListReclamationsComponent implements OnInit {
 
   
   
-  listReclamations: ReclamationClient[];
-  ReclamationClient: ReclamationClient = new ReclamationClient ; 
+  listReclamations: any;
+  ReclamationClient: ReclamationClient = new ReclamationClient() ; 
   
   
   constructor(  private reclamationClient :ReclamationClientService,
@@ -33,7 +33,7 @@ export class ListReclamationsComponent implements OnInit {
   }
 
   getlistReclamations(){
-    this.reclamationClient.getReclamationClientsList().subscribe(
+    this.reclamationClient.getReclamationClientsList1().subscribe(
       response => {
         console.log("response",response);
         this.listReclamations = response; }
