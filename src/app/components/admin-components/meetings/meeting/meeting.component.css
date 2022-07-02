@@ -19,7 +19,7 @@ select{
 
 
 button {
-    margin: 50px;
+    margin: 10px;
     font-size: 15px;
 }
 .container{
@@ -34,13 +34,13 @@ button {
     margin-left: 25%;
 }
 .btn{
-    color: #010101;
+    /* color: #010101;
     font-size: 16px;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     border: 1px solid #adc364 !important;
     padding: 5px 15px;
     
-    background: #cdc94e;
+    background: #cdc94e; */
 }
 

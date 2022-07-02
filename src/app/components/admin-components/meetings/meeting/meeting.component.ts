@@ -11,7 +11,7 @@ import { MeetingService } from 'src/app/services/meeting.service';
 export class MeetingComponent implements OnInit {
 
   meeting: Meeting = new Meeting();
-
+  minDate=new Date().toJSON().split('T')[0];
   constructor(
     public dialogRef: MatDialogRef<MeetingComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Meeting,
@@ -21,6 +21,7 @@ export class MeetingComponent implements OnInit {
     if(this.data !== null){
       this.meeting = this.data;
     }
+    let minDate = new Date().toJSON().split('T')[0];
   }
 
   onSubmit() {
@@ -37,5 +38,6 @@ export class MeetingComponent implements OnInit {
   onClose(value: any) {
     this.dialogRef.close(value);
   }
+ 
 
 }
