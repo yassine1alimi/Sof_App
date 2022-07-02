@@ -1,15 +1,16 @@
 
 
 
-    <h3><i class="fa fa-angle-right"></i> Announcements</h3>
+    <h3 class="title-body"> Announcements</h3>
+    <hr width="60%" style="text-align: left; margin-bottom: 50px;  color: #535456;">
     <div _ngcontent-roy-c3="" >
         
         <br _ngcontent-roy-c3="">
         
-        <button _ngcontent-roy-c3="" class="btnnote" type="submit" (click)="onAddNote()">add an announcement </button>
+        <button _ngcontent-roy-c3="" class=" btn-primary" type="submit" (click)="onAddNote()">add an announcement </button>
         <br><br><br>
-        <div class="row justify-content-center">
-            <div class="col-md-10">
+        <div class="row ">
+            <div class="col-md-12">
         <table class="table table-striped card-body text" style="padding-left:50%;padding-right:10%">
         
             <thead class="thead-inverse">
@@ -26,7 +27,7 @@
                     
                     <td>
                         <div class="pull-right hidden-phone" >
-                            <button mat-raised-button class="action-button btn-primary" (click)="updateUser(noteInterne)"><mat-icon>edit</mat-icon></button> 
+                            <button mat-raised-button class="action-button btn-warning" (click)="updateUser(noteInterne)"><mat-icon>edit</mat-icon></button> 
                         <button mat-raised-button class="action-button btn-danger" (click)="deleteNote(noteInterne)"><mat-icon>delete_outline</mat-icon></button>
                         </div>
 

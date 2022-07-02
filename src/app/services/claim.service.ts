@@ -21,7 +21,7 @@ export class ClaimService {
 
 
   getClaimsList(){
-    return this.httpClient.get<any>("http://localhost:8087/claims_attente",httpOptions);
+    return this.httpClient.get<Claim>("http://localhost:8087/claims_attente",httpOptions);
   }
 
   getClaimsOfUser(id:number){

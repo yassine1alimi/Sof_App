@@ -3511,3 +3511,20 @@ p {
 .table{
     font-size:13px;
 }
+.btn-primary{
+    background-color: #ff9728 !important;
+    border:2px solid #ff9728 !important;
+    color: white !important;
+    padding: 8px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+.btn-primary:hover{
+    background-color: transparent !important;
+    color: #ff9728 !important;
+    border:2px solid #ff9728 !important;
+  
+}
+th{
+    text-align:center !important;
+}
