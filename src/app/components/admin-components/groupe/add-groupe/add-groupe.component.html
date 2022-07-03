@@ -1,27 +1,42 @@
 <form class="form-horizontal style-form">
-  
-    <div class="form-group">
-      <label class="col-sm-2 col-sm-2 control-label" >Ajouter Groupe</label>
-      <div class="col-sm-10">
-        <textarea type="text" [(ngModel)]="groupe.name"  
-        name="name" id="name" placeholder="Task" rows="5" data-rule="required">
-        </textarea>
-        
-      </div>
-    </div>
-  
+<div class="form-group">
+  <label class="col-md-4 col-sm-2 control-label" for="departement">Département</label>
+  <div class="col-md-8">
+    <!-- <select name="departement" id="departement" class="form-control" [(ngModel)]="">
+      <option value="-1" [attr.selected]="true">Sélectionner</option>
+      <option *ngFor="let dept of departements" [value]="dept.idDepartement">
+        {{dept.name}}
+      </option>
+    </select> -->
     
-  </form>
+    {{departements||json}}
+    <select class="form-control"   #mySelect
+        (change)='onOptionsSelected(mySelect.value)'>>
+          <option value="" disabled selected>Select your option</option>
+          <option *ngFor="let item of departements" [value]="item.idDepartement">
+          {{item.name}}
+          </option>
+       </select>
+  </div>
+</div>
+  <div class="form-group">
+   
+    <label class="col-md-4 col-sm-2 control-label">Ajouter Groupe</label>
+    <div class="col-md-8">
+      <input type="text" [(ngModel)]="groupe.name" name="name" id="name" placeholder="Nom groupe" class="form-control"
+        data-rule="required">
 
 
-        <div class="click">
-          <button _ngcontent-roy-c3="" 
-                class="btn my-2 my-sm-0" 
-                type="submit" 
-                (click)="onSubmit()">Save</button>
-          <button _ngcontent-roy-c3="" 
-                class="btn  my-2 my-sm-0" 
-                type="submit" 
-                (click)="onClose()">Cancel</button>
-        
-        </div>
+    </div>
+  </div>
+
+
+</form>
+
+
+<div class="click float-right">
+  <button _ngcontent-roy-c3="" class="btn btn-danger" type="submit" (click)="onClose()">Cancel</button>
+  <button _ngcontent-roy-c3="" class="btn btn-primary" type="submit" (click)="onSubmit()">Save</button>
+
+
+</div>

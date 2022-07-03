@@ -1,13 +1,15 @@
 
-  <h3>List of employees</h3>
+  <h3 class="title-body">List of employees</h3>
+  <hr width="60%" style="text-align: left; margin-bottom: 50px;  color: #535456;">
+
   
-  <div>
+  <div class="row">
     
-        <div >
+        <div class="col-md-6">
           <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchText"/> 
         </div>
       
-  <table class="table table-striped">
+  <table class="table table-striped mt-5">
 
     <thead class="thead-inverse">
     <tr>
@@ -21,7 +23,7 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let employe of employees | filter:searchText | paginate: {itemsPerPage: 4, currentPage: p}" >
+        <tr *ngFor="let employe of employees | filter:searchText | paginate: {itemsPerPage: 10, currentPage: p}" >
           <td><!--<img src="http://localhost:8087/avatar/{{employe.idUser}}" alt="user" width="70" class="img-circle">--></td>
             <td>{{employe.prenom}}</td>
             <td>{{employe.nom}}</td>

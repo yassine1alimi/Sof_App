@@ -30,7 +30,7 @@ export class ListGroupeComponent implements OnInit {
 
   openGroupeDialog(data?:any){
     const dialogRef = this.dialog.open(AddGroupeComponent,{
-      disableClose : true,
+      disableClose : false,
       autoFocus : true ,
       width : "50%",
       data : data

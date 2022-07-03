@@ -63,6 +63,7 @@ import { CalimRequestComponent } from './components/admin-components/claims/cali
 import { AddTimesheetComponent } from './components/admin-components/add-timesheet/add-timesheet.component';
 import { ChatComponent } from './components/forum-components/chat/chat.component';
 import { ForumComponent } from './components/forum-components/forum/forum.component';
+import { DepartementsGroupsComponent } from './components/admin-components/departements-groups/departements-groups.component';
 
 //import { HomeComponent } from './home/home.component';
 //import { RegisterComponent } from './register/register.component';
@@ -136,6 +137,7 @@ const routes: Routes = [
   
   { path: 'groupeList', component: ListGroupeComponent },
   { path: 'departementList', component: ListDepartementComponent },
+  { path: 'DepartementsAndGroups', component: DepartementsGroupsComponent },
   { path: 'addreclamationcLIENT', component: AddReclamationComponent },
   { path: 'list-reclamations1', component: ListReclamations1Component },
 

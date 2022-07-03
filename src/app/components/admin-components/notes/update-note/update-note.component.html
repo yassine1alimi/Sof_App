@@ -1,42 +1,44 @@
-
-<div class="container" >
-
-   
-        
-    <div class="row">
-  
-        
-        <div class="col-lg-1"></div>
-  
-        <div class="col-lg-10">
-            <div id="ui">
-                <form (ngSubmit)="processForm()">
-                
-                <br>
-
-                <label for="fname">Titre</label>
-                <input type="text" name="title" class="form-control" [(ngModel)]="noteInterne.title">
-                <br>
-
-                <label for="fname">Body</label>
-                <editor  name="content" class="form-control" [(ngModel)]="noteInterne.content" [init]="{plugins: 'link'}"></editor>
+<div class="container mt-5">
 
 
-              <br>
-              <br>
-              <input type="submit" value="save" class="btn">
-  
-            </form>
-            </div>
-  
-        
-  
+
+  <div class="row">
+
+
+
+    <div class="col-lg-12">
+      <div id="">
+        <form (ngSubmit)="processForm()">
+
+          <br>
+
+          <label for="fname" class="col-md-2 col-sm-2 control-label">Titre</label>
+          <div class="col-md-10"><input type="text" name="title" class="form-control" [(ngModel)]="noteInterne.title">
+          </div>
+          <br>
+
+          <label for="fname" class="col-md-2 col-sm-2 control-label mt-5">Body</label>
+          <div class="col-md-10">
+            <editor name="content" class="form-control mt-5" [(ngModel)]="noteInterne.content" [init]="{plugins: 'link'}">
+            </editor>
+          </div>
+
+
+          <br>
+          <br>
+          <div class=" block float-right mt-5"> <input type="submit" value="Modifier" class="btn btn-primary">
+          </div>
+
+        </form>
+      </div>
+
+
+
     </div>
-  
-    <div class="col-lg-1"></div>
-  
-    </div>
-    
-        
-    
+
+
   </div>
+
+
+
+</div>

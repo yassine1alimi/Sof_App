@@ -113,6 +113,7 @@ import { CalimRequestComponent } from './components/admin-components/claims/cali
 import { AddTimesheetComponent } from './components/admin-components/add-timesheet/add-timesheet.component';
 import { ChatComponent } from './components/forum-components/chat/chat.component';
 import { ForumComponent } from './components/forum-components/forum/forum.component';
+import { DepartementsGroupsComponent } from './components/admin-components/departements-groups/departements-groups.component';
 
 @NgModule({
   declarations: [
@@ -184,6 +185,7 @@ import { ForumComponent } from './components/forum-components/forum/forum.compon
     AddTimesheetComponent,
     ChatComponent,
     ForumComponent,
+    DepartementsGroupsComponent,
     
     
    

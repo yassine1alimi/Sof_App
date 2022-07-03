@@ -21,7 +21,7 @@
             </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let noteInterne of notesInternes | paginate: {itemsPerPage: 2, currentPage: p}" >
+                <tr *ngFor="let noteInterne of notesInternes | paginate: {itemsPerPage: 10, currentPage: p}" >
                     <td>{{noteInterne.title}}</td>
                     <td><p class="content" [innerHTML]="noteInterne.content"></p></td>
                     

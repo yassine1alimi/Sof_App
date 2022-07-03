@@ -59,6 +59,11 @@ button.action-button {
     color: #535456 !important;
     font-size: 24px !important;
 }
+.pagination {
+   
+    float: right;
+    position: relative;
+}
 p {
     font-family: Poppins-Regular;
     font-size: 14px;

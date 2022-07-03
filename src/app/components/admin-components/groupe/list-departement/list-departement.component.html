@@ -1,25 +1,25 @@
 
-<app-sidebar></app-sidebar>
-<div class="container">
-  <h3><i class="fa fa-angle-right"></i> Departement List </h3>
- 
+
+<div class="container dept">
+  <h3 class="title-body"> Departement List </h3>
+ <div class="row mt-5">
+   <div class="col-md-6 col-xs-12">
+    <button 
+    class="btn-primary"
+   
+     type="submit"
+    (click)="onAddDepartement()">Ajouter Departement</button>
+   </div> 
+    <div  class="col-md-6 col-xs-12" >
+        <input type="text" class="form-control borderOg" placeholder="Search" [(ngModel)]="searchText"/> 
+      </div>  
+      </div>  
     
-    <div  class="col-md-4" style="margin:15px;">
-        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchText"/> 
-      </div>    
-      <table class="table table-striped" width="100px">
   <div _ngcontent-roy-c3="" >
       
-      <br _ngcontent-roy-c3="">
       
-      <button 
-              class="btn-tache"
-              style="margin-left: 35%; width: 30%;"
-               type="submit"
-              (click)="onAddDepartement()">Ajouter Departement</button>
-      <br><br><br>
       
-      <div style="margin:5px 0px" class="container">
+      <div style="margin:5px 0px" class=" mt-5">
      
           <ul class="list-group">
             
@@ -37,6 +37,6 @@
       </div>
       
 </div>
-</table>
+
 </div>
 

@@ -40,7 +40,7 @@ export class NotesInternesComponent implements OnInit {
  
    openNoteDialog(data?: any){
      const dialogRef = this.dialog.open(AjoutNoteComponent, {
-       disableClose: true,
+       disableClose: false,
        autoFocus : true ,
        width : "65%",
        data: data

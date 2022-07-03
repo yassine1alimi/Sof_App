@@ -49,7 +49,8 @@ a, a:hover, a:focus {
 
 /* Bootstrap Modifications */
 .modal-header {
-	background: #4ECDC4;
+	/* background: #4ECDC4; */
+    background: linear-gradient(25deg, rgba(255,151,40,1) 0%, rgba(17,197,187,1) 69%, rgba(2,103,173,1) 100%);
 }
 
 .modal-title {

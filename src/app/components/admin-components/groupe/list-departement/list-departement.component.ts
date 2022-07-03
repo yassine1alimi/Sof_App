@@ -33,7 +33,7 @@ export class ListDepartementComponent implements OnInit {
 
   openDepartementDialog(data?:any){
     const dialogRef = this.dialog.open(AjouterDepartementComponent,{
-      disableClose : true,
+      disableClose : false,
       autoFocus : true ,
       width : "50%",
       data : data
