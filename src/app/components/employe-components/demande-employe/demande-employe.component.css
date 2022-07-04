@@ -71,7 +71,7 @@ label{
     font-size: 16px;
 }
 
-table{
+/* table{
     position: absolute;
     z-index: 2;
     margin-left: -50%;
@@ -84,7 +84,7 @@ table{
     border-radius: 12px 12px 0 0;
     overflow: hidden;
    
-   }
+   } */
    td , th{
     padding: 15px 20px;
     text-align: center;

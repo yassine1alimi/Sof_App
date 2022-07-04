@@ -1,63 +1,62 @@
-<div class="container" >
+<div class="container profil">
 
-   
-        
-    <div class="row">
-  
-        
-        <div class="col-lg-5">
-        <div id="ui">
 
-          <form (ngSubmit)="processForm()">
-          <h3><i class="fa fa-angle-right"></i> Edit your profile picture</h3>
+
+  <div class="row ">
+
+
+    <div class="col-lg-5 m-3 ">
+      <div id="ui">
+
+        <form (ngSubmit)="processForm()">
+          <h3 class="title-body mt-0"> Modifier votre photo de profil</h3>
           <img src="http://localhost:8087/avatar/{{id}}" alt="user" width="150" class="img-circle">
-          
-            
-            <br>
-            <input class="select" type="file" accept="image/*" (change)="onSelectFile($event)">
-        
-            <br>
-            <br>
-            <input type="submit" value="save" class="btn-photo">
+
+
+          <br>
+          <input class="select" type="file" accept="image/*" (change)="onSelectFile($event)">
+
+          <br>
+          <br>
+          <input type="submit" value="Sauvegarder" class="btn btn-primary float-right">
 
         </form>
 
-        </div>
       </div>
-        <div class="col-lg-7">
-            <div id="ui">
-                <form (ngSubmit)="updatePassword()">
-                <h3><i class="fa fa-angle-right"></i> Edit your password
-                </h3>
-                <br>
-                
-  
-
-                <label for="fname">Old password</label>
-              <input type="password" name="oldPassword" class="form-control" [(ngModel)]="oldPassword">
-
-                <label for="fname">New password</label>
-              <input type="password" name="newPassword" class="form-control" [(ngModel)]="newPassword">
-                        
-                      
-                    
-                  
-            
-                <br>
-                <br>
-                <input type="submit" value="save" class="btn">
-  
-            </form>
-            </div>
-  
-        
-  
     </div>
-  
+    <div class="col-lg-7 m-3 ">
+      <div id="ui">
+        <form (ngSubmit)="updatePassword()">
+          <h3 class="title-body mt-0">Modifier votre mot de passe
+          </h3>
+          <br>
+
+
+          <div class="col-md-12">
+            <label for="oldPassword" class="form-label col-md-3">Old password</label>
+            <input type="password" name="oldPassword" id="oldPassword" class="form-control col-md-9"
+              [(ngModel)]="oldPassword">
+          </div>
+          <div class="col-md-12 mt-3">
+            <label for="newpassword" class="form-label col-md-3">New password</label>
+            <input type="password" name="newPassword" id="newpassword" class="form-control col-md-9"
+              [(ngModel)]="newPassword">
+          </div>
+
+          <div class="col-md-12 mt-5">
+          <input type="submit" value="Sauvegarder" class="btn btn-primary float-right"></div>
+
+        </form>
+      </div>
+
+
+
+    </div>
+
     <div class="col-lg-1"></div>
-  
-    </div>
-    
-        
-    
+
   </div>
+
+
+
+</div>

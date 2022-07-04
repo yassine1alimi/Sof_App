@@ -1,37 +1,36 @@
 <div class="container pt-10" style="margin-top: 8%">
-    <div class="row">
-      <div
-        class="col-sm d-flex justify-content-center align-items-start landingText mr-10"
-      >
-        <div class="col ml-3">
-          <div>
-            <p class="text-start">
-              <span style="font-size: 28pt;"
-                ><strong>SOFRECOM</strong>, est un cabinet de conseil et d'ingénierie spécialisé dans les télécommunications...</span
-              ><br />
-              <span style="font-size: 17pt;">
-                Raison d'être de Sofrecom : Nous contribuons à la création d'un monde connecté créateur de liens où salariés, clients et partenaires interagissent dans la confiance.</span
-              >
-            </p>
-          </div>
-  
-          <div>
-            <button
-              mdbBtn
-              type="button"
-              (click)="start()"
-              color="indigo"
-              class="buttonText"
-              mdbWavesEffect
-              routerLink="/candidat"
-            >
-            Apply
-            </button>
-          </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mat-carousel timings="250ms ease-in" [autoplay]="true" interval="5000" color="accent" maxWidth="100%"
+        proportion="25" slides="3" [loop]="true" [hideArrows]="false" [hideIndicators]="false" [useKeyboard]="true"
+        [useMouseWheel]="false" orientation="ltr">
+        <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides; let i = index" [image]="slide.image"
+          overlayColor="#00000040" [hideOverlay]="false"></mat-carousel-slide>
+      </mat-carousel>
+    </div>
+    <div class="col-sm d-flex justify-content-center align-items-start landingText mr-10">
+      
+      <div class="col ml-12">
+        <!-- <div class="col-md-8"></div>
+      <div class="col-md-4">
+        <button style="width:50%" mdbBtn type="button" (click)="start()" color="indigo"
+          class="btn btn-primary float-right" mdbWavesEffect routerLink="/candidat">
+          Ajouter réclamation
+        </button>
+      </div> -->
+        <div>
+          <p class="text-start">
+            <span style="font-size: 28pt;"><strong>SOFRECOM</strong>, est un cabinet de conseil et d'ingénierie
+              spécialisé dans les télécommunications...</span><br />
+            <span style="font-size: 17pt;">
+              Raison d'être de Sofrecom : Nous contribuons à la création d'un monde connecté créateur de liens où
+              salariés, clients et partenaires interagissent dans la confiance.</span>
+          </p>
         </div>
-      </div>
-      <div class="col-sm d-flex justify-content-center ">
-        <img src="assets/img/sofrecomtunisie.jpg" width="553" height="200" style="margin-top: 16%;" />
+       
       </div>
     </div>
+    
+   
   </div>
+</div>

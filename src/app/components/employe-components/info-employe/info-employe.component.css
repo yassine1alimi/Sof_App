@@ -13,13 +13,7 @@ body{
 }
 
 .wrapper{
-    position: absolute;
-    top: 50%;
-    left: 58%;
-    
-    transform: translate(-50%,-50%);
-    width: 1100px;
-    height: 420px;
+   
     
     display: flex;
     box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
@@ -30,7 +24,8 @@ body{
 .wrapper .left{
         width: 30%;
         
-        background: rgb(199, 204, 204);
+        background: rgb(255,151,40);
+    background: linear-gradient(25deg, rgba(255,151,40,1) 0%, rgba(17,197,187,1) 69%, rgba(2,103,173,1) 100%);
          padding: 30px 25px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
@@ -56,7 +51,7 @@ body{
   }
 
   .wrapper .right{
-    width: 90%;
+    width: 70%;
     background: #fff;
     padding: 30px 25px;
     border-top-right-radius: 5px;
@@ -113,13 +108,11 @@ body{
     width: 30px;
 }
 .wrapper .right .btn {
-    width: 300px;
-    height: 30px;
+    
     font-family: 'Montserrat', sans-serif;
     font-size:17px;
-    color:white;
-    margin : 30px 200px;
-    background: #4ECDC4;
+   
+    
     
 }
 

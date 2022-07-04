@@ -114,7 +114,7 @@ import { AddTimesheetComponent } from './components/admin-components/add-timeshe
 import { ChatComponent } from './components/forum-components/chat/chat.component';
 import { ForumComponent } from './components/forum-components/forum/forum.component';
 import { DepartementsGroupsComponent } from './components/admin-components/departements-groups/departements-groups.component';
-
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -233,6 +233,7 @@ import { DepartementsGroupsComponent } from './components/admin-components/depar
     NgxPaginationModule,
     EditorModule,
     MatSnackBarModule,
+    MatCarouselModule.forRoot()
   
   ],
 

@@ -218,8 +218,8 @@ hr {
 
 ul.top-menu > li > .logout {
 	color: #ff9728;
-	font-size: 18px;
-    font-weight: 600;
+	font-size: 14px;
+    font-weight: 500;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	border: 1px solid #ff9728 !important;

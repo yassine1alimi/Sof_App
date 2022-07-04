@@ -5,12 +5,12 @@
     <div class="row">
 
         
-        <div class="col-lg-1"></div>
+     
 
-        <div class="col-lg-10">
-            <div id="ui">
+        <div class="col-lg-12">
+            <div id="">
                 <form (ngSubmit)="processForm()">
-                <h3><i class="fa fa-angle-right"></i> Informations personnelles</h3>
+                <h3 class="title-body"> Informations personnelles</h3>
                 <br>
                     
                 <div class="row">
@@ -26,7 +26,7 @@
                 </div>
 
                 <label for="fname">email</label>
-                <input type="text" name="email" class="form-control" [(ngModel)]="employe.email">
+                <input type="email" name="email" class="form-control" [(ngModel)]="employe.email">
                 
                 <div class="row">
                     <div class="col-lg-6">
@@ -36,7 +36,7 @@
 
                     <div class="col-lg-6">
                         <label for="fname">Tél</label>
-                        <input type="text" name="phone" class="form-control" [(ngModel)]="employe.phone">
+                        <input type="tel" name="phone" class="form-control" [(ngModel)]="employe.phone">
                     </div>
                 </div>
 
@@ -59,7 +59,7 @@
                
                 <br>
                 <br>
-                <h3><i class="fa fa-angle-right"></i> Poste</h3>
+                <h3 class="title-body"> Poste</h3>
                 <br>
 
                 <div class="row">
@@ -80,9 +80,9 @@
 
                     <div class="col-lg-6">
                         <label for="fname">Salaire</label>
-                        <input type="text" name="salary" class="form-control" [(ngModel)]="employe.salary">
+                        <input type="number" step="0.5" min="0" name="salary" class="form-control" [(ngModel)]="employe.salary">
                     </div>
-                    <div>
+                    <div class="col-lg-6">
                         <label for="fname">Date d'entrée</label>
                         <input type="date" name="dateEntree" class="form-control" [(ngModel)]="employe.dateEntree">
                     </div>
@@ -93,7 +93,7 @@
                     
                 <br>
                 <br>
-                <input type="submit" value="save" class="btn">
+                <input type="submit" value="Sauvegarder" class="btn btn-primary float-right">
 
             </form>
             </div>
@@ -102,7 +102,7 @@
 
     </div>
 
-    <div class="col-lg-1"></div>
+  
 
     </div>
     

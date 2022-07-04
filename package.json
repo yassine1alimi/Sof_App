@@ -28,6 +28,7 @@
     "@fullcalendar/daygrid": "^4.4.0",
     "@fullcalendar/interaction": "^4.4.0",
     "@ng-bootstrap/ng-bootstrap": "^5.3.0",
+    "@ngmodule/material-carousel": "^0.6.0",
     "@syncfusion/ej2-angular-charts": "^18.1.45",
     "@syncfusion/ej2-angular-schedule": "^17.4.55",
     "@tinymce/tinymce-angular": "^3.6.0",

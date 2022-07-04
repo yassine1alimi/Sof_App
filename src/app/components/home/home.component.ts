@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  
+  slides = [
+    {'image': 'assets/img/sofrecomtunisie.jpg'}, 
+    {'image': 'assets/img/sofrecomtunisie.jpg'},
+    {'image': 'assets/img/sofrecomtunisie.jpg'}
+  ];
 
   constructor() { }
 
