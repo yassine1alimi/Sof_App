@@ -68,7 +68,7 @@ export class EmployeService {
     data.append('image',fileImage);
     return this.httpClient.put("http://localhost:8087/user",data);
   }
-
+/*
   public createEmploye(employe: Employe, fileImage:File) {
 
     const data:FormData= new FormData();
@@ -77,7 +77,14 @@ export class EmployeService {
     
     return this.httpClient.post<Employe>("http://localhost:8087/employees/create", data);
   }
+*/
+public createEmploye(employe: Employe) {
 
+  const data:FormData= new FormData();
+  data.append('user',JSON.stringify(employe));
+  
+  return this.httpClient.post<Employe>("http://localhost:8087/employees/create", data);
+}
   setter(employe:Employe){
     this.employe= employe;
   }

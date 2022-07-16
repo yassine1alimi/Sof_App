@@ -22,7 +22,7 @@ body{
     height: 420px;
     
     display: flex;
-    box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+    /*box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);*/
 }
 
 
@@ -31,7 +31,7 @@ body{
         width: 30%;
         height: 455px;
         
-        background: rgb(199, 204, 204);
+        background: linear-gradient(25deg, rgba(255,151,40,1) 0%, rgba(17,197,187,1) 69%, rgba(2,103,173,1) 100%);
          padding: 30px 25px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;

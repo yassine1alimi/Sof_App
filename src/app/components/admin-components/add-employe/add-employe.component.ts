@@ -41,7 +41,7 @@ export class AddEmployeComponent implements OnInit {
     selectFileImage(event){
       this.fileImage = event.target.files[0];
     }
-
+/*
     createEmploye():void {
       this.employeService.createEmploye(this.user,this.fileImage)
         .subscribe(  data => {
@@ -50,9 +50,15 @@ export class AddEmployeComponent implements OnInit {
       };
 
       
-   
-    
+   */
 
+    
+ createEmploye():void {
+      this.employeService.createEmploye(this.user)
+        .subscribe(  data => {
+          alert("candidate created successfully");
+        } );
+      };
     
 
 
