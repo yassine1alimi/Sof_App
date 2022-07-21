@@ -16,9 +16,10 @@ export class User {
     public  typeContrat : String;
     public  dateEntree : Date;
     public  coutHeuresSup : String;
-    public  dureeConges : number;
     
     public  salary : String;
+    public  groupe_name : String;
+
     public username : String;
     public password : String;
     public repassword : String;

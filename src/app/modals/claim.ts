@@ -7,6 +7,8 @@ export class Claim {
     description:String;
     statusOfClaim: boolean;
     fileClaim:String;
+    priorite:String;
+    groupe_name:String;
     idUser:number;
 	  user: User;
 }

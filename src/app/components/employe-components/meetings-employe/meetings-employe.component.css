@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
+
+
+.btn-meeting{
+    background-color: #ff9728;
+    left: 35%; 
+    width: 30%;
+    height: 28px;
+    border-radius: 2px;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}

@@ -50,4 +50,18 @@ export class ClaimService {
     return this.httpClient.delete("http://localhost:8087/deleteClaim/"+id);
   }
 
+affecterClaimGroupe(claim:Claim)  {
+  return this.httpClient.put("http://localhost:8087/affecterClaimGroupe",claim);
+}
+setter(claim:Claim){
+  this.claim= claim;
+}
+
+getter(){
+ return this.claim;
+}
+public onCreateClaim(claim) {
+   
+  return this.httpClient.post<any>("http://localhost:8087/claims/create",claim);
+ }
 }

@@ -15,7 +15,8 @@ export class Employe {
     public  fonction : String;
     public  typeContrat : String;
     public  dateEntree : Date;
-   
+    public  groupe_name : String;
+
     public  salary : String;
     public username : String;
     public password : String;

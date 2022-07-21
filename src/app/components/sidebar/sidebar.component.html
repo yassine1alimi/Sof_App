@@ -103,13 +103,23 @@
     
         </li>
         
-        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard"> <!--*ngIf="showAdminBoard"-->
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard" > <!--*ngIf="showAdminBoard"-->
           <a href="javascript:;">
             <i class="fa fa-group"></i>
             <span routerLink ="/meetings">Meetings</span>
             <span class="dcjq-icon"></span></a>
     
         </li>
+
+        
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showEmployeBoard" > <!--*ngIf="showAdminBoard"-->
+          <a href="javascript:;">
+            <i class="fa fa-group"></i>
+            <span routerLink ="/employe-meetings">Meetings</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
+
 
         <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard">
           <a href="javascript:;">

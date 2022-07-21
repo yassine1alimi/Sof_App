@@ -1,0 +1,57 @@
+<h3 class="title-body">Meetings</h3>
+    
+<hr width="60%" style="text-align: left; margin-bottom: 50px;  color: #535456;">
+       
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+        <table class="table table-striped " >
+        
+            <thead class="thead-inverse">
+            <tr>
+              <th>titre</th>
+              <th>Type</th>
+              <th>Jour </th>
+              <th>Heure</th>
+
+              
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let meeting of meetings | paginate: {itemsPerPage: 10, currentPage: p}" >
+                    <td>{{meeting.titre}}</td>
+                    <td>{{meeting.type}}</td>
+                    <td>{{meeting.meetingDay}}</td>
+                    <td>{{meeting.meetingTime}}</td>
+
+                </tr>
+            </tbody>
+          </table>
+          <div class="pagination">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+          </div>
+        </div>
+    
+      <!--table class="table  card-body text" style="padding-right:10%">
+    
+        <thead class="thead-inverse">
+        <tr>
+          <th>Titre</th>
+          <th>Type</th>
+          <th>Jour Meeting</th>
+          <th>Heure Meeting</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let meeting of meetings" >
+                <td>{{meeting.titre}}</td>
+                <td>{{meeting.type}}</td>
+                <td>{{meeting.meetingDay}}</td>
+                <td>{{meeting.meetingTime}}</td>
+                
+                
+    
+               
+            </tr>
+        </tbody>
+      </table-->

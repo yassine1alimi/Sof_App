@@ -115,6 +115,9 @@ import { ChatComponent } from './components/forum-components/chat/chat.component
 import { ForumComponent } from './components/forum-components/forum/forum.component';
 import { DepartementsGroupsComponent } from './components/admin-components/departements-groups/departements-groups.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { AffecterClaimComponent } from './components/admin-components/claims/affecter-claim/affecter-claim.component';
+import { ClaimComponent } from './components/admin-components/claims/claim/claim.component';
+import { MeetingsEmployeComponent } from './components/employe-components/meetings-employe/meetings-employe.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -186,6 +189,9 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     ChatComponent,
     ForumComponent,
     DepartementsGroupsComponent,
+    AffecterClaimComponent,
+    ClaimComponent,
+    MeetingsEmployeComponent,
     
     
    
@@ -243,6 +249,6 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
   providers: [EmployeService,CandidateService,TodoService,EmailService,authInterceptorProviders,GroupeService,DepartementService,  { provide: MAT_DIALOG_DATA, useValue: {} },
     { provide: MatDialogRef, useValue: {} }],
   bootstrap: [AppComponent,ListDemandesComponent,ListClaimsComponent],
-  entryComponents:[AjoutNoteComponent,AddTodoComponent,AddGroupeComponent,AjouterDepartementComponent,MeetingComponent,AcceptComponent,UpdateMeetingComponent]
+  entryComponents:[AjoutNoteComponent,AddTodoComponent,AddGroupeComponent,AjouterDepartementComponent,MeetingComponent,AcceptComponent,UpdateMeetingComponent,AffecterClaimComponent,ClaimComponent]
 })
 export class AppModule { }

@@ -64,6 +64,7 @@ import { AddTimesheetComponent } from './components/admin-components/add-timeshe
 import { ChatComponent } from './components/forum-components/chat/chat.component';
 import { ForumComponent } from './components/forum-components/forum/forum.component';
 import { DepartementsGroupsComponent } from './components/admin-components/departements-groups/departements-groups.component';
+import { MeetingsEmployeComponent } from './components/employe-components/meetings-employe/meetings-employe.component';
 
 //import { HomeComponent } from './home/home.component';
 //import { RegisterComponent } from './register/register.component';
@@ -128,6 +129,9 @@ const routes: Routes = [
  // { path: 'caisse', component: CaisseComponent },
   { path: 'timetracking', component: TimetrackingComponent },
   { path: 'meetings', component: ListMeetingComponent },
+  
+  { path: 'employe-meetings', component: MeetingsEmployeComponent },
+
   { path: 'list-requests', component: ListDemandesComponent },
   { path: 'list-claims' , component: ListClaimsComponent},
 
