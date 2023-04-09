@@ -54,9 +54,9 @@ export class AddEmployeComponent implements OnInit {
 
     
  createEmploye():void {
-      this.employeService.createEmploye(this.user)
+      this.employeService.createEmploye(this.user,this.fileImage)
         .subscribe(  data => {
-          alert("candidate created successfully");
+          alert("employe created successfully");
         } );
       };
     

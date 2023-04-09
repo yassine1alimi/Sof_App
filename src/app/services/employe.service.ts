@@ -20,7 +20,7 @@ export class EmployeService {
 
   public getEmployeesList()  {
     console.log("test call");
-    return this.httpClient.get<any>("http://localhost:8087/users", httpOptions);
+    return this.httpClient.get<any>("http://localhost:8087/users2", httpOptions);
   }
 
   public getEmploye(id: any){
@@ -78,12 +78,12 @@ export class EmployeService {
     return this.httpClient.post<Employe>("http://localhost:8087/employees/create", data);
   }
 */
-public createEmploye(employe: Employe) {
-
+public createEmploye(employe: Employe,photo:File) {
+  
   const data:FormData= new FormData();
   data.append('user',JSON.stringify(employe));
-  
-  return this.httpClient.post<Employe>("http://localhost:8087/employees/create", data);
+  data.append('photo',photo);
+  return this.httpClient.post<Employe>("http://localhost:8087/createEmploye", data);
 }
   setter(employe:Employe){
     this.employe= employe;

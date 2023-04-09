@@ -1,0 +1,55 @@
+
+
+
+    <h3 class="title-body"> Faqs</h3>
+    <hr width="60%" style="text-align: left; margin-bottom: 50px;  color: #535456;">
+    <div _ngcontent-roy-c3="" >
+        
+        <br _ngcontent-roy-c3="">
+        
+        <button _ngcontent-roy-c3="" class=" btn-primary" type="submit" (click)="onAddNote()">Ajouter faq </button>
+        <br><br><br>
+        <div class="row ">
+            <div class="col-md-12">
+        <table class="table table-striped card-body text" style="padding-left:50%;padding-right:10%">
+        
+            <thead class="thead-inverse">
+            <tr>
+              <th>Question</th>
+              <th>Réponse</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let faq of faqs | paginate: {itemsPerPage: 10, currentPage: p}" >
+                    <td>{{faq.title}}</td>
+                    <td><p class="content" [innerHTML]="faq.content"></p></td>
+                    
+                    <td>
+                        <div class="pull-right hidden-phone" >
+                            <button mat-raised-button class="action-button btn-warning" (click)="updateUser(faq)"><mat-icon>edit</mat-icon></button> 
+                        <button mat-raised-button class="action-button btn-danger" (click)="deleteNote(faq)"><mat-icon>delete_outline</mat-icon></button>
+                        </div>
+
+                        
+                    </td>
+        
+                   
+                </tr>
+            </tbody>
+          </table>
+          <div class="pagination">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+          </div>
+        </div>
+</div>
+
+
+
+
+
+
+<!--<modal>
+
+</modal>-->

@@ -39,8 +39,12 @@ export class AddTimesheetComponent implements OnInit {
   }
 
   ajouterTimesheet():void{
+    console.log(this.timesheet);
+    console.log(this.timesheet.dateDebut);
+    console.log(this.timesheet.dateFin);
     this.timesheetService.ajouterTimesheet(this.idReclamation,this.idUser,this.timesheet.dateDebut,this.timesheet.dateFin)
     .subscribe(  data => {
+      
       alert("timesheet created successfully");
     } );
   };

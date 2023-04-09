@@ -118,6 +118,11 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { AffecterClaimComponent } from './components/admin-components/claims/affecter-claim/affecter-claim.component';
 import { ClaimComponent } from './components/admin-components/claims/claim/claim.component';
 import { MeetingsEmployeComponent } from './components/employe-components/meetings-employe/meetings-employe.component';
+import { AjoutFaqComponent } from './components/admin-components/faqs/ajout-faq/ajout-faq.component';
+import { NotesFaqsComponent } from './components/admin-components/faqs/notes-faqs/notes-faqs.component';
+import { UpdateFaqComponent } from './components/admin-components/faqs/update-faq/update-faq.component';
+import { ShowMessagesComponent } from './components/admin-components/contacts/show-messages/show-messages.component';
+import { FaqClientComponent } from './components/client-components/faq-client/faq-client.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -192,6 +197,11 @@ import { MeetingsEmployeComponent } from './components/employe-components/meetin
     AffecterClaimComponent,
     ClaimComponent,
     MeetingsEmployeComponent,
+    AjoutFaqComponent,
+    NotesFaqsComponent,
+    UpdateFaqComponent,
+    ShowMessagesComponent,
+    FaqClientComponent,
     
     
    
@@ -249,6 +259,6 @@ import { MeetingsEmployeComponent } from './components/employe-components/meetin
   providers: [EmployeService,CandidateService,TodoService,EmailService,authInterceptorProviders,GroupeService,DepartementService,  { provide: MAT_DIALOG_DATA, useValue: {} },
     { provide: MatDialogRef, useValue: {} }],
   bootstrap: [AppComponent,ListDemandesComponent,ListClaimsComponent],
-  entryComponents:[AjoutNoteComponent,AddTodoComponent,AddGroupeComponent,AjouterDepartementComponent,MeetingComponent,AcceptComponent,UpdateMeetingComponent,AffecterClaimComponent,ClaimComponent]
+  entryComponents:[AjoutNoteComponent,AjoutFaqComponent,AddTodoComponent,AddGroupeComponent,AjouterDepartementComponent,MeetingComponent,AcceptComponent,UpdateMeetingComponent,AffecterClaimComponent,ClaimComponent]
 })
 export class AppModule { }

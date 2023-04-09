@@ -50,7 +50,29 @@
 
     <ul class="nav pull-right top-menu" *ngIf="isLoggedIn">
       <li><a class="logout" (click)="logout()"> <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+     
     </ul>
+    <mat-accordion  class="message-acc">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title style="margin-bottom: -3px;">
+            <i class="fa fa-comments"></i> <span style="margin-left: 7px;">Messages</span> 
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+    
+        <div class="vacation-sub-menu" *ngFor="let contact of contacts">
+          <li><i class="fa fa-lightbulb"></i><span class="blue mx-2">{{contact.subject}}</span> <button (click)="showMessage(contact.idContact)"> <i class="fa fa-plus"></i> </button>
+          <span class="message_content mt-2" id="message_content_{{ contact.idContact }}">{{contact.message}}</span>
+          </li>
+          
+          
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion> 
+ 
+    
   </div>
+  
 </div>
+
 <!--header end-->

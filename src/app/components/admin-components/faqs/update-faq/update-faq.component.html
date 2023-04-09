@@ -1,0 +1,44 @@
+<div class="container mt-5">
+
+
+
+    <div class="row">
+  
+  
+  
+      <div class="col-lg-12">
+        <div id="">
+          <form (ngSubmit)="processForm()">
+  
+            <br>
+  
+            <label for="fname" class="col-md-2 col-sm-2 control-label">Titre</label>
+            <div class="col-md-10"><input type="text" name="title" class="form-control" [(ngModel)]="faq.title">
+            </div>
+            <br>
+  
+            <label for="fname" class="col-md-2 col-sm-2 control-label mt-5">Body</label>
+            <div class="col-md-10">
+              <editor name="content" class="form-control mt-5" [(ngModel)]="faq.content" [init]="{plugins: 'link'}">
+              </editor>
+            </div>
+  
+  
+            <br>
+            <br>
+            <div class=" block float-right mt-5"> <input type="submit" value="Modifier" class="btn btn-primary">
+            </div>
+  
+          </form>
+        </div>
+  
+  
+  
+      </div>
+  
+  
+    </div>
+  
+  
+  
+  </div>

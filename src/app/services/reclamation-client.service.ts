@@ -22,7 +22,7 @@ export class ReclamationClientService {
     data.append('pj1',pj1);
     data.append('pj2',pj2);
 
-    return this.httpClient.post<ReclamationClient>("http://localhost:8087/createreclamationClient", data);
+    return this.httpClient.post<ReclamationClient>("http://localhost:8087/createreclamationClient", data,{responseType:'text'as 'json'});
   }
   public createReclamationClient1(reclamationClient: ReclamationClient, pj1:File, pj2:File, id:number) {
 

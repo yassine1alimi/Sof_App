@@ -1,0 +1,23 @@
+<div class="container">
+    <mat-accordion>
+  
+      <mat-expansion-panel   *ngFor="let faq of faqs">
+        <mat-expansion-panel-header [collapsedHeight]="CollapsedHeight" [expandedHeight]="ExpandedHeight" matRipple>
+          <mat-panel-title>
+            
+            {{faq.title}}
+          </mat-panel-title>
+  
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+          {{faq.content}}
+        </mat-panel-description>
+      </mat-expansion-panel>
+  
+      
+
+    </mat-accordion>
+  </div>
+
+
+  

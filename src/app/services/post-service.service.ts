@@ -22,37 +22,37 @@ export class PostServiceService {
     this.http = http 
   }
 
-  addPost(file,userId,post):Observable<Post>{
+  addPost(file: string | Blob,userId: string | number,post: any):Observable<Post>{
     const content :FormData = new FormData();
     content.append('details',JSON.stringify(post));
     content.append('file',file);
     console.log(content);
     console.log(this.BASE_URL+"addPostFile/"+userId)
-    return this.http.post<Post>(this.BASE_URL+"addPostFile/"+userId,content);
+    return this.http.post<Post>(this.BASE_URL+"/addPostFile/"+userId,content);
   }
 
-  addVideo(file,userId,post){
+  addVideo(file: string | Blob,userId: string | number,post: any){
     const content :FormData = new FormData();
     content.append('details',JSON.stringify(post));
     content.append('file',file);
     console.log(content);
     //console.log(this.BASE_URL+"addVideoFile/"+userId)
-    return this.http.post<Post>(this.BASE_URL+"addVideoFile/"+userId,content);
+    return this.http.post<Post>(this.BASE_URL+"/addVideoFile/"+userId,content);
   }
 
 
 
   deletePost(postId:number){
     console.log()
-    return this.http.delete(this.BASE_URL+"deletePost/"+postId)
+    return this.http.delete(this.BASE_URL+"/deletePost/"+postId)
   }
 
 
-  updatePost(postId,file){
+  updatePost(postId: number,file: string | Blob){
     const content :FormData = new FormData();
     content.append('file',file);
     console.log(content)
-    return this.http.put<Post>(this.BASE_URL+"updatePostFile/"+"19",content);
+    return this.http.put<Post>(this.BASE_URL+"/updatePostFile/"+"19",content);
   }
 
 
@@ -62,46 +62,46 @@ export class PostServiceService {
 
   }*/
 
-  getPostsByUserPreferences(userId):Observable<Post[]>{
+  getPostsByUserPreferences(userId: number):Observable<Post[]>{
    /*
     let end_point = this.BASE_URL+"getPostsByUserPreferences/"+userId;
     return this.http.get<Post[]>(end_point);
     */
-    return this.http.get<Post[]>(this.BASE_URL + '/getPostsByUserPreferences'+'/' + userId,httpOptions);
+    return this.http.get<Post[]>(this.BASE_URL + '/getPostsByUserPreferences'+'/' + 4,httpOptions);
   }
 
-  getPostEvaluation(postId):Observable<EvaluationPost>{
-    return this.http.get<EvaluationPost>(this.BASE_URL+"evaluatePostRatingByPostId/"+postId);
+  getPostEvaluation(postId: string | number):Observable<EvaluationPost>{
+    return this.http.get<EvaluationPost>(this.BASE_URL+"/evaluatePostRatingByPostId/"+postId);
   }
-  getUserPost(postId):Observable<evaluationDetails[]>{
-    return this.http.get<evaluationDetails[]>(this.BASE_URL+"getAllEvaluationPostByPostId/"+postId);
-  }
-
-  getUserName(userId){
-    return this.http.get<evaluationDetails[]>(this.BASE_URL+"getUser/"+userId);
+  getUserPost(postId: string | number):Observable<evaluationDetails[]>{
+    return this.http.get<evaluationDetails[]>(this.BASE_URL+"/getAllEvaluationPostByPostId/"+postId);
   }
 
-  addcomment(commentContent,postId,userId){
+  getUserName(userId: string){
+    return this.http.get<evaluationDetails[]>(this.BASE_URL+"/getUser/"+userId);
+  }
+
+  addcomment(commentContent: string,postId: string,userId: string | number){
     let comment = {}
     comment['commentContent'] = commentContent;
     console.log(comment);
     //http://localhost:8087/addEvaluatePostText/22/3
     //console.log(comment);
-    return this.http.post(this.BASE_URL+"addEvaluatePostText/"+postId+"/"+userId,{"commentContent":commentContent});
+    return this.http.post(this.BASE_URL+"/addEvaluatePostText/"+postId+"/"+userId,{"commentContent":commentContent});
 
   }
 
-  addEvaluationRating(postId,userId,rating){
-    console.log(this.BASE_URL+"evaluatePostRating"+"/"+postId+"/"+userId);
+  addEvaluationRating(postId: string,userId: string,rating: any){
+    console.log(this.BASE_URL+"/evaluatePostRating"+"/"+postId+"/"+userId);
     let ratingEvaluation = {};
     ratingEvaluation["rating"] = rating;
-    return this.http.post(this.BASE_URL+"evaluatePostRating"+"/"+postId+"/"+userId,ratingEvaluation);
+    return this.http.post(this.BASE_URL+"/evaluatePostRating"+"/"+postId+"/"+userId,ratingEvaluation);
   }
-  addEvaluationEmoji(postId,userId,emoji){
+  addEvaluationEmoji(postId: string,userId: string | number,emoji: string){
     let emojiEvaluation = {};
     emojiEvaluation["emoji"]=emoji;
     console.log(emojiEvaluation)
-    return this.http.post(this.BASE_URL+"evaluatePostEmoji"+"/"+postId+"/"+userId,emojiEvaluation);
+    return this.http.post(this.BASE_URL+"/evaluatePostEmoji"+"/"+postId+"/"+userId,emojiEvaluation);
 
   }
   

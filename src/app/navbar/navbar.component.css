@@ -5,3 +5,16 @@
 .nav-bg{
     background-color: #f1f5f8;
 }
+.message-acc{
+    position:absolute;
+    z-index: 999;
+    right: 5%;
+    
+}
+.message_content{
+    display: none;
+}
+.blue{
+    color:rgb(124, 181, 236);
+    font-weight: 600;
+}

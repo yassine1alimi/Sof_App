@@ -45,8 +45,12 @@ export class InfoReclamationClientComponent implements OnInit {
    
 
      createreclamation() {
+      console.log(this.reclamation);
+      console.log(this.pj1);
+      console.log(this.pj2);
     this.reclamationService.createReclamationClient(this.reclamation,this.pj1,this.pj2)
       .subscribe(  data => {
+        console.log(data);
         alert("reclamation created successfully");
       } );
       this.router.navigate(['/response']);

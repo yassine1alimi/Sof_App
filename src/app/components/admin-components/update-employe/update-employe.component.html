@@ -10,17 +10,17 @@
       <div class="col-lg-10">
           <div id="ui">
               <form (ngSubmit)="processForm()">
-              <h3><i class="fa fa-angle-right"></i> Personal informations</h3>
+              <h3><i class="fa fa-angle-right"></i> Informations personnelles</h3>
               <br>
 
               <div class="row">
                   <div class="col-lg-6">
-                      <label for="fname">First name</label>
+                      <label for="fname">Prénom</label>
                       <input type="text" name="prenom" class="form-control" [(ngModel)]="employe.prenom">
                   </div>
 
                   <div class="col-lg-6">
-                      <label for="fname">Last name</label>
+                      <label for="fname">Nom</label>
                       <input type="text" name="nom" class="form-control" [(ngModel)]="employe.nom">
                   </div>
               </div>
@@ -30,24 +30,24 @@
               
               <div class="row">
                   <div class="col-lg-6">
-                      <label for="fname">Date of birth</label>
+                      <label for="fname">Date de naissance</label>
                       <input type="text" name="dateOfBirth" class="form-control" [(ngModel)]="employe.dateOfBirth">
                   </div>
 
                   <div class="col-lg-6">
-                      <label for="fname">Phone</label>
+                      <label for="fname">Téléphone</label>
                       <input type="text" name="phone" class="form-control" [(ngModel)]="employe.phone">
                   </div>
               </div>
 
               <div class="row">
                   <div class="col-lg-8">
-                      <label for="fname">Address</label>
+                      <label for="fname">Adresse</label>
                       <input type="text" name="adresse" class="form-control" [(ngModel)]="employe.adresse">
                   </div>
 
                   <div class="col-lg-4">
-                      <label for="fname">City</label>
+                      <label for="fname">Ville</label>
                       <input type="text" name="ville" class="form-control" [(ngModel)]="employe.ville">
                   </div>
               </div>
@@ -59,12 +59,12 @@
              
               <br>
               <br>
-              <h3><i class="fa fa-angle-right"></i> Post</h3>
+              <h3><i class="fa fa-angle-right"></i> Poste</h3>
               <br>
 
               <div class="row">
                   <div class="col-lg-6">
-                      <label for="fname">Department</label>
+                      <label for="fname">Départment</label>
                       <div style="margin-top:5px;height: 20px;;" class="col-sm-10">
                         <select class="col-sm-12" id="departement" name="departement" [(ngModel)]="employe.departement" class="form-control" style="height: 30px;">
                           <option value="Type IT">Departement IT</option>
@@ -101,12 +101,12 @@
 
               <div class="row">
                   <div>
-                    <label for="fname">Entry date </label>
+                    <label for="fname">d'entrée </label>
                     <input type="date" name="dateEntree" class="form-control" [(ngModel)]="employe.dateEntree">
                   </div>
 
                   <div class="col-lg-6">
-                      <label for="fname">Salary</label>
+                      <label for="fname">Salaire</label>
                       <input type="text" name="salary" class="form-control" [(ngModel)]="employe.salary">
                   </div>
               </div>

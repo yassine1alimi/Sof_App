@@ -1,3 +1,4 @@
+import { User } from './user';
 export class Post {
     postId:number;
     postLocked:boolean;
@@ -6,4 +7,6 @@ export class Post {
     postContentType:string
     postDescription:string
     PostCreationDate:Date
+    idUser:number;
+	user: User;
 }

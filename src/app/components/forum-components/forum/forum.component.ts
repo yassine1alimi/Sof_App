@@ -32,6 +32,7 @@ export class ForumComponent implements OnInit {
   typed;
   locked = false;
   isVideo:boolean  = false;
+  id:number;
   constructor(private activatedRoute:ActivatedRoute,private http:HttpClient,private modalService: NgbModal,private postService:PostServiceService,private formBuilder:FormBuilder){
 
   }
@@ -47,7 +48,7 @@ export class ForumComponent implements OnInit {
       "commentContent":new FormControl()
     })
   
-    this.postService.getPostsByUserPreferences(6)
+    this.postService.getPostsByUserPreferences(this.id)
     .subscribe(data=>{
   
       this.posts = data;

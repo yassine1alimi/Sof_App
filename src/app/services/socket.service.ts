@@ -31,7 +31,7 @@ export class SocketService {
     this.webSocket.send(JSON.stringify(chatMessageDto));
   }
 
-  public closeWebSocket() {
+ public closeWebSocket() {
     this.webSocket.close();
   }
 }

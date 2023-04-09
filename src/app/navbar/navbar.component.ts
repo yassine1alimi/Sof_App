@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { TokenStorageService } from '../services/token-storage.service';
 import { Router } from '@angular/router';
+import { Contact } from '../modals/contact';
+import { ContactService } from '../services/contact.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  contact : Contact = new Contact() ;
+  contacts : any;
 
   private roles: string[];
   isLoggedIn = false;
@@ -15,7 +19,8 @@ export class NavbarComponent implements OnInit {
   showModeratorBoard = false;
   username: string;
 
-  constructor(private tokenStorageService: TokenStorageService,private router: Router) { }
+  constructor(private tokenStorageService: TokenStorageService,
+    private router: Router,private contactservice:ContactService,private elementRef: ElementRef) { }
 
   ngOnInit() {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
@@ -29,12 +34,25 @@ export class NavbarComponent implements OnInit {
 
       this.username = user.username;
     }
+    this.getcontacts();
   }
-
+  getcontacts(){
+    this.contactservice.getAllContact().subscribe(
+      response => {
+        this.contacts = response
+      console.log("contact", response)}
+     );
+     
+  }
   logout() {
     this.tokenStorageService.signOut();
     
     this.router.navigate(['/home']);
+  }
+  showMessage(id:any){
+    console.log("id msg", id);
+    const element = this.elementRef.nativeElement.querySelector('#message_content_'+id);
+    element.classList.toggle('show');
   }
 
 }

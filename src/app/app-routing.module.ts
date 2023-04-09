@@ -65,6 +65,9 @@ import { ChatComponent } from './components/forum-components/chat/chat.component
 import { ForumComponent } from './components/forum-components/forum/forum.component';
 import { DepartementsGroupsComponent } from './components/admin-components/departements-groups/departements-groups.component';
 import { MeetingsEmployeComponent } from './components/employe-components/meetings-employe/meetings-employe.component';
+import { NotesFaqsComponent } from './components/admin-components/faqs/notes-faqs/notes-faqs.component';
+import { UpdateFaqComponent } from './components/admin-components/faqs/update-faq/update-faq.component';
+import { FaqClientComponent } from './components/client-components/faq-client/faq-client.component';
 
 //import { HomeComponent } from './home/home.component';
 //import { RegisterComponent } from './register/register.component';
@@ -106,6 +109,8 @@ const routes: Routes = [
   { path: 'updateInfoEmploye', component: UpdateInfoEmployeComponent },
   { path: 'updateMeeting', component: UpdateMeetingComponent },
   { path: 'updateNote', component: UpdateNoteComponent },
+  { path: 'updateFaq', component: UpdateFaqComponent },
+
   { path: 'updateTodo', component: UpdateTodoComponent },
   { path: 'profilClient/:id', component: ProfilClientComponent },
    { path: 'demandeRequest/:id', component: DemandeRequestComponent },
@@ -119,6 +124,8 @@ const routes: Routes = [
   {path:'addtimesheet/:idReclamation',component:AddTimesheetComponent},
 
   { path: 'notesInternes', component: NotesInternesComponent },
+  { path: 'notesFaqs', component: NotesFaqsComponent },
+
   { path: 'employe-notesInternes', component: NotesInternesEmployeComponent },
     { path: 'history_requests', component: DemandeEmployeComponent },
     { path: 'history_claims', component: ClaimClientComponent },
@@ -146,10 +153,10 @@ const routes: Routes = [
   { path: 'list-reclamations1', component: ListReclamations1Component },
 
   
-  {path:"chat",component:ChatComponent},
+  {path:"forum/chat",component:ChatComponent},
   {path:"forum",component:ForumComponent},
 
- 
+ {path:"faq-client",component:FaqClientComponent},
   { path: 'footer', component: FooterComponent },
 
 ];
