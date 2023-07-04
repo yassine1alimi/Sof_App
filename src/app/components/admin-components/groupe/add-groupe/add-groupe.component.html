@@ -10,13 +10,12 @@
     </select> -->
     
     {{departements||json}}
-    <select class="form-control"   #mySelect
-        (change)='onOptionsSelected(mySelect.value)'>>
-          <option value="" disabled selected>Select your option</option>
-          <option *ngFor="let item of departements" [value]="item.idDepartement">
-          {{item.name}}
-          </option>
-       </select>
+    <select class="form-control" #mySelect (change)="onOptionsSelected(mySelect.value)">
+      <option value="" disabled selected>Select your option</option>
+      <option *ngFor="let item of departements" [value]="item.idDepartement">
+        {{ item.idDepartement }}
+      </option>
+    </select>
   </div>
 </div>
   <div class="form-group">

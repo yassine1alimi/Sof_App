@@ -13,7 +13,7 @@ import { Departement } from 'src/app/modals/departement';
 export class AddGroupeComponent implements OnInit {
 
   groupes:Groupe[];
-  departements:Departement[];
+  departements: any[] = [];
   public groupe: Groupe = new Groupe();
 
   constructor(public dialogRef: MatDialogRef<AddGroupeComponent>, 
@@ -41,14 +41,13 @@ export class AddGroupeComponent implements OnInit {
   
     
   };
-  getAllDepartements(){
-    this.departementService.getDepartements()
-    .subscribe(
+  getAllDepartements() {
+    this.departementService.getDepartements().subscribe(
       response => {
         this.departements = response;
-      console.log("resdept",response) }
-     );
-     
+        console.log("resdept", response);
+      }
+    );
   }
 
   onClose(value:any){

@@ -1,4 +1,3 @@
-
 <h3> Liste des tickets</h3>
 <div class="card-body bg-light">
 
@@ -7,16 +6,18 @@
   <thead class="thead-inverse">
   <tr>
     <th></th>
+    <th> email</th>
     <th>Prénom</th>
-    <th>Nom</th>
-    <th>action</th>
+    <!--th>Nom</th>
+    <th>action</th-->
     </tr>
   </thead>
   <tbody>
       <tr *ngFor="let demande of demandes" >
         <td><img src="http://localhost:8087/avatar/{{demande.user.idUser}}" alt="user" width="70" class="img-circle"></td>
-          <td>{{demande.user.prenom}}</td>
-          <td>{{demande.user.nom}}</td>
+        <td>{{demande.user.email}}</td>  
+        <!--td>{{demande.user.prenom}}</td>
+          <td>{{demande.user.nom}}</td-->
           
           <td>
            
