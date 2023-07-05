@@ -27,7 +27,7 @@ export class HolidayCalendarComponent implements OnInit {
   }
 
   addEvent(date){
-    var title = prompt ("Ajouter le nombre des heures de travail");
+    var title = prompt ("coment");
     if (title == '') return;
 
     this.calendarEvents = this.calendarEvents.concat({

@@ -47,13 +47,13 @@ export class PresenceCalendarComponent implements OnInit {
 
   addEvent(date){
    
-      var title = prompt ("Ajouter le nombre des heures de travail");
+      var title = prompt ("coment");
       
       if (title == '') return;
       console.log("addevent")
       console.log((date.getMonth()+1).toString().length)
       let pres = new Presence();
-      pres.nbrreclamations = Number(title);
+      pres.nbrreclamations = String(title);
       pres.day =date.getFullYear()+"-"+((date.getMonth()+1).toString().length == 1 ? "0"+(date.getMonth()+1):(date.getMonth()+1))+"-"+(date.getDate().toString().length == 1 ? "0"+date.getDate():date.getDate());
       console.log(pres)
       this.addPresence(pres,this.id);
