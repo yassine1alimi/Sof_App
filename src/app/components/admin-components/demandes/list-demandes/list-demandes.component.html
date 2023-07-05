@@ -1,4 +1,10 @@
-<h3> Liste des tickets</h3>
+<br>
+<br>
+<h3> List of tickets</h3>
+<h6>Simplify communication, enhance collaboration, and deliver exceptional support to your employees.
+Manage and resolve various types of tickets raised by employees, ensuring a smooth workflow and timely resolutions.</h6>
+<hr width="60%" style="text-align: left; margin-bottom: 50px;  color: #535456;">
+
 <div class="card-body bg-light">
 
 <table class="table table-striped">
@@ -6,18 +12,18 @@
   <thead class="thead-inverse">
   <tr>
     <th></th>
-    <th> email</th>
-    <th>Prénom</th>
-    <!--th>Nom</th>
-    <th>action</th-->
+    <th> Email</th>
+    <th>First name </th>
+    <th>Last name</th>
+    <th>action</th>
     </tr>
   </thead>
   <tbody>
       <tr *ngFor="let demande of demandes" >
         <td><img src="http://localhost:8087/avatar/{{demande.user.idUser}}" alt="user" width="70" class="img-circle"></td>
         <td>{{demande.user.email}}</td>  
-        <!--td>{{demande.user.prenom}}</td>
-          <td>{{demande.user.nom}}</td-->
+        <td>{{demande.user.prenom}}</td>
+          <td>{{demande.user.nom}}</td>
           
           <td>
            
