@@ -1,12 +1,12 @@
 <form class="form-horizontal style-form">
     <div class="form-group">
-      <label class="col-sm-2 col-sm-2 control-label" >Titre</label>
+      <label class="col-sm-2 col-sm-2 control-label" >Title</label>
       <div class="col-sm-10">
         <input type="text" [(ngModel)]="presence.title" name="title" id="title" placeholder="titre">
       </div>
     </div>
     <div class="form-group">
-      <label class="col-sm-2 col-sm-2 control-label" >Contenu</label>
+      <label class="col-sm-2 col-sm-2 control-label" >Content</label>
       <div class="col-sm-10">
         <textarea type="text" [(ngModel)]="presence.content"  
         name="content" id="content" placeholder="" rows="20" data-rule="required">
@@ -21,4 +21,4 @@
 <button _ngcontent-roy-c3="" 
         class="btn btn-success my-2 my-sm-0" 
         type="submit" 
-        (click)="onSubmit()">Enregistrer</button>
+        (click)="onSubmit()">save</button>

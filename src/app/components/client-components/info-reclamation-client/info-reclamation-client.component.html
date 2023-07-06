@@ -5,11 +5,11 @@
 
     <div class="col-lg-12 col-md-12 col-sm-12" >
       <div class="">
-       <h4 class="title-body"> Informations générales
+       <h4 class="title-body"> General information
         </h4>
         <form class="form-horizontal style-form" style="margin-top: 5px;">
         <div class="form-group">
-            <label class="col-sm-2 col-sm-2 control-label">Prénom
+            <label class="col-sm-2 col-sm-2 control-label">Last name
             </label>
             <div class="col-sm-10">
               <input type="text" [(ngModel)]="reclamation.prenom" class="form-control" name="prenom" id="prenom" placeholder=""
@@ -17,8 +17,8 @@
                #prenom="ngModel" required>
 
               <div *ngIf="prenom.errors && (prenom.invalid || prenom.touched)">
-                <small class="text-danger" *ngIf="prenom.errors.required" [class.d-none]=" prenom.untouched" style="font-size: 11px;"> Le prénom est obligatoire</small>
-                <small class="text-danger" *ngIf="prenom.errors.minlength" [class.d-none]=" prenom.untouched" style="font-size: 11px;"> Le prénom doit comporter au moins 3 caractères</small>
+                <small class="text-danger" *ngIf="prenom.errors.required" [class.d-none]=" prenom.untouched" style="font-size: 11px;"> First name is required</small>
+                <small class="text-danger" *ngIf="prenom.errors.minlength" [class.d-none]=" prenom.untouched" style="font-size: 11px;">The first name must contain at least 3 characters</small>
                 
               </div>
 
@@ -31,20 +31,20 @@
               minlength="3" [class.is-invalid]="nom.invalid && nom.touched"
                #nom="ngModel" required>
                <div *ngIf="nom.errors && (nom.invalid || nom.touched)">
-                <small class="text-danger" *ngIf="nom.errors.required" [class.d-none]=" nom.untouched" style="font-size: 11px;"> Le nom de famille est obligatoire</small>
-                <small class="text-danger" *ngIf="nom.errors.minlength" [class.d-none]=" nom.untouched" style="font-size: 11px;"> Le nom de famille doit comporter au moins 3 caractères</small>
+                <small class="text-danger" *ngIf="nom.errors.required" [class.d-none]=" nom.untouched" style="font-size: 11px;">Last name is required</small>
+                <small class="text-danger" *ngIf="nom.errors.minlength" [class.d-none]=" nom.untouched" style="font-size: 11px;"> Last name must be at least 3 characters long</small>
                 
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label class="col-sm-2 col-sm-2 control-label">Date de la réclamation</label>
+            <label class="col-sm-2 col-sm-2 control-label">Complaint date</label>
             <div class="col-sm-10">
               <input type="date" [(ngModel)]="reclamation.dateReclamation" class="form-control" name="dateReclamation" id="dateReclamation" placeholder=""
               required
           #dateReclamation="ngModel"
           [class.is-invalid]="dateReclamation.invalid && dateReclamation.touched">
-          <small class="text-danger" [class.d-none]="dateReclamation.valid || dateReclamation.untouched" style="font-size: 11px;">La date de naissance est requise</small>
+          <small class="text-danger" [class.d-none]="dateReclamation.valid || dateReclamation.untouched" style="font-size: 11px;">Date of birth is required</small>
             </div>
           </div>
           <div class="form-group">
@@ -55,13 +55,13 @@
               #email="ngModel"
               [class.is-invalid]="email.invalid && email.touched">
               <div *ngIf="email.errors && (email.invalid || email.touched)">
-                <small class="text-danger" *ngIf="email.errors.required" [class.d-none]=" email.untouched" style="font-size: 11px;"> L'adresse électronique est obligatoire</small>
-                <small class="text-danger" *ngIf="email.errors.email" [class.d-none]=" email.untouched" style="font-size: 11px;"> L'adresse e-mail doit être une adresse e-mail valide</small>
+                <small class="text-danger" *ngIf="email.errors.required" [class.d-none]=" email.untouched" style="font-size: 11px;"> Email address is required</small>
+                <small class="text-danger" *ngIf="email.errors.email" [class.d-none]=" email.untouched" style="font-size: 11px;"> The e-mail address must be a valid e-mail address</small>
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label class="col-sm-2 col-sm-2 control-label">Téléphone</label>
+            <label class="col-sm-2 col-sm-2 control-label">Phone</label>
             <div class="col-sm-10">
               <input type="number" [(ngModel)]="reclamation.phone" class="form-control" name="phone" id="phone" placeholder=""
               required
@@ -71,8 +71,8 @@
         
           [class.is-invalid]="phone.invalid && phone.touched">
           <div *ngIf="phone.errors && (phone.invalid || phone.touched)">
-            <small class="text-danger" *ngIf="phone.errors.required" [class.d-none]=" phone.untouched" style="font-size: 11px;"> Le numéro de téléphone est requis</small>
-            <small class="text-danger" *ngIf="phone.errors.minlength" [class.d-none]=" phone.untouched" style="font-size: 11px;"> Le numéro de téléphone doit être composé de 8 chiffres</small>
+            <small class="text-danger" *ngIf="phone.errors.required" [class.d-none]=" phone.untouched" style="font-size: 11px;"> Telephone number is required</small>
+            <small class="text-danger" *ngIf="phone.errors.minlength" [class.d-none]=" phone.untouched" style="font-size: 11px;">Telephone number must be 8 digits long</small>
           </div>
             </div>
           </div>
@@ -83,7 +83,7 @@
               minlength="3" [class.is-invalid]="typeClaim.invalid && typeClaim.touched"
                #typeClaim="ngModel" required>
                <div *ngIf="typeClaim.errors && (typeClaim.invalid || typeClaim.touched)">
-                <small class="text-danger" *ngIf="typeClaim.errors.required" [class.d-none]=" typeClaim.untouched" style="font-size: 11px;"> type est requis</small>
+                <small class="text-danger" *ngIf="typeClaim.errors.required" [class.d-none]=" typeClaim.untouched" style="font-size: 11px;"> type is required</small>
                 <small class="text-danger" *ngIf="typeClaim.errors.minlength" [class.d-none]=" typeClaim.untouched" style="font-size: 11px;"> typeClaim must be at least 3 characters</small>
                 
               </div>
@@ -127,7 +127,7 @@
         </form>
         
       </div>
-      <button type="button" class="btn btn-primary float-right" (click)="createreclamation()">Sauvegarder</button>
+      <button type="button" class="btn btn-primary float-right" (click)="createreclamation()">Save</button>
 
     </div>
     

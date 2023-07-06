@@ -5,12 +5,12 @@
 <div class="add-post-content">
   <div class="container">
     <div>
-      <h3 class="title-body">Créer une nouvelle annonce</h3>
+      <h3 class="title-body">Create a new announcement</h3>
     </div>
     <hr>
     <form [formGroup]="addPostForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <label class="col-md-2 col-sm-2 control-label">Titre</label>
+        <label class="col-md-2 col-sm-2 control-label">Title</label>
         <div class="col-md-10"> <input type="text" [formControlName]="'title'" class="form-control" placeholder="Title"></div>
        
       </div>
@@ -21,8 +21,8 @@
       </div>
       
       <div class="block float-right mt-3">
-        <button type="submit" class="btn btn-danger" (click)="onClose()">Annuler</button>
-      <button type="submit" class="btn btn-primary">Sauvegarder</button>
+        <button type="submit" class="btn btn-danger" (click)="onClose()">Cancel</button>
+      <button type="submit" class="btn btn-primary">Save</button>
      
     </div>
     </form >

@@ -9,7 +9,6 @@
       </option>
     </select> -->
     
-    {{departements||json}}
     <select class="form-control" #mySelect (change)="onOptionsSelected(mySelect.value)">
       <option value="" disabled selected>Select your option</option>
       <option *ngFor="let item of departements" [value]="item.idDepartement">
@@ -20,7 +19,7 @@
 </div>
   <div class="form-group">
    
-    <label class="col-md-4 col-sm-2 control-label">Ajouter Groupe</label>
+    <label class="col-md-4 col-sm-2 control-label">Add Groupe</label>
     <div class="col-md-8">
       <input type="text" [(ngModel)]="groupe.name" name="name" id="name" placeholder="Nom groupe" class="form-control"
         data-rule="required">

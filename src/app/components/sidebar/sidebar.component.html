@@ -80,36 +80,36 @@
         </mat-accordion>
 
 
-        <!--mat-accordion class="sidebar" routerLinkActive = "active" *ngIf="showAdminBoard" >
+        <mat-accordion class="sidebar" routerLinkActive = "active" *ngIf="showAdminBoard" >
           <mat-expansion-panel>
             <mat-expansion-panel-header>
               <mat-panel-title style="margin-left: -7%;margin-bottom: -3px;">
-                <i class="fa fa-desktop"></i>  <span style="margin-left: 7px;">Reclamations</span>
+                <i class="fa fa-desktop"></i>  <span style="margin-left: 7px;">Reclamations cLIENT</span>
               </mat-panel-title>
             </mat-expansion-panel-header>
         
             <div class="vacation-sub-menu">
-              <li><a style= "margin-bottom:-10px"routerLink ="/bilan-demandes"><i class="fa fa-book"></i> status of claims</a></li>
-              <li><a routerLink ="/list-reclamations1"><i class="fa fa-edit"></i>reclamation en attente</a></li>
+              <li><a style= "margin-bottom:-10px" routerLink ="/list-claims"><i class="fa fa-book"></i> Claims</a></li>
+              <li><a routerLink ="/list-reclamations"><i class="fa fa-edit"></i>customer complaints</a></li>
             </div>
           </mat-expansion-panel>
-        </mat-accordion-->
+        </mat-accordion>
 
-        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard"> <!--*ngIf="showAdminBoard"-->
+        <!--li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard"> 
           <a href="javascript:;">
             <i class="fa fa-group"></i>
             <span routerLink ="/list-claims">Claims</span>
             <span class="dcjq-icon"></span></a>
     
-        </li>
+        </li-->
         
-        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard" > <!--*ngIf="showAdminBoard"-->
+        <!--li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard" > 
           <a href="javascript:;">
             <i class="fa fa-group"></i>
             <span routerLink ="/meetings">Meetings</span>
             <span class="dcjq-icon"></span></a>
     
-        </li>
+        </li-->
 
         
         <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showEmployeBoard" > <!--*ngIf="showAdminBoard"-->
@@ -121,13 +121,7 @@
         </li>
 
 
-        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard">
-          <a href="javascript:;">
-            <i class="fa fa-briefcase"></i>
-            <span routerLink ="/list-reclamations" >customer complaints</span>
-            <span class="dcjq-icon"></span></a>
-    
-        </li>
+        
 
         
       
@@ -165,13 +159,13 @@
     
         </li>-->
 
-        <!--<li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard">
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard">
           <a href="javascript:;">
             <i class="fa fa-calendar"></i>
             <span routerLink ="/holiday-calendar">Calendrier des congés</span>
             <span class="dcjq-icon"></span></a>
     
-        </li>-->
+        </li>>
 
         <!--<li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showEmployeBoard">
           <a href="javascript:;" >
@@ -264,14 +258,14 @@
             <span routerLink ="/departementList">Departement List</span>
             <span class="dcjq-icon"></span></a>
     
-        </li> -->
+        </li> >
         <li class="sub-menu dcjq-parent-li" >
           <a href="javascript:;">
             <i class="fa fa-tasks"></i>
             <span routerLink ="/forum">Forum</span>
             <span class="dcjq-icon"></span></a>
     
-        </li>
+        </li-->
 
 
         <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard" > <!--*ngIf="showAdminBoard"-->
@@ -298,6 +292,21 @@
           </mat-expansion-panel>
         </mat-accordion>
         
+
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showUserBoard">
+          <a href="javascript:;"  >
+            <i class="fa fa-bell"></i>
+            <span routerLink ="/employe-notesInternes" >Announcements</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showUserBoard" > <!--*ngIf="showAdminBoard"-->
+          <a href="javascript:;">
+            <i class="fa fa-group"></i>
+            <span routerLink ="/faq-client">FAQS</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
       </ul>
       <!-- sidebar menu end-->
     </div>

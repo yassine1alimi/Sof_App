@@ -1,7 +1,7 @@
 
   <h3><i class="fa fa-angle-right"></i> Examen des demandes des employés</h3>
   
-  <!--div>
+  <div>
     
         <div >
           <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchText"/> 
@@ -21,7 +21,7 @@
                 <td><img src="http://localhost:8087/avatar/{{employe.idUser}}" alt="user" 
                   width="80" class="img-circle" [routerLink]="['/presence-calendar', employe.idUser]">
                 </td>
-                <td> {{employe.prenom}} {{employe.nom}} </td> 
+                <td> {{employe.username}} {{employe.nom}} </td> 
       
                  
               </tr>
@@ -30,7 +30,7 @@
   <div class="pagination">
   <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
-</div-->
+</div>
 
 
 

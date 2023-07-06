@@ -10,17 +10,17 @@
         <div class="col-lg-12">
             <div id="">
                 <form (ngSubmit)="processForm()">
-                <h3 class="title-body"> Informations personnelles</h3>
+                <h3 class="title-body"> Personal information     </h3>
                 <br>
                     
                 <div class="row">
                     <div class="col-lg-6">
-                        <label for="fname">Prénom</label>
+                        <label for="fname">Last name</label>
                         <input type="text" name="prenom" class="form-control" [(ngModel)]="employe.prenom">
                     </div>
 
                     <div class="col-lg-6">
-                        <label for="fname">Nom</label>
+                        <label for="fname">First name</label>
                         <input type="text" name="nom" class="form-control" [(ngModel)]="employe.nom">
                     </div>
                 </div>
@@ -30,26 +30,23 @@
                 
                 <div class="row">
                     <div class="col-lg-6">
-                        <label for="fname">Date de naissance</label>
+                        <label for="fname">Date of birth     </label>
                         <input type="date" name="dateOfBirth" class="form-control" [(ngModel)]="employe.dateOfBirth">
                     </div>
 
                     <div class="col-lg-6">
-                        <label for="fname">Tél</label>
+                        <label for="fname">Phone</label>
                         <input type="tel" name="phone" class="form-control" [(ngModel)]="employe.phone">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-8">
-                        <label for="fname">Adresse</label>
+                        <label for="fname">Adress</label>
                         <input type="text" name="adresse" class="form-control" [(ngModel)]="employe.adresse">
                     </div>
 
-                    <div class="col-lg-4">
-                        <label for="fname">Ville</label>
-                        <input type="text" name="ville" class="form-control" [(ngModel)]="employe.ville">
-                    </div>
+                    
                 </div>
 
 
@@ -64,7 +61,7 @@
 
                 <div class="row">
                     <div class="col-lg-6">
-                        <label for="fname">Département</label>
+                        <label for="fname">Departement</label>
                         <input type="text" name="departement" class="form-control" [(ngModel)]="employe.departement">
                     </div>
 
@@ -79,11 +76,11 @@
                 <div class="row">
 
                     <div class="col-lg-6">
-                        <label for="fname">Salaire</label>
+                        <label for="fname">Salary</label>
                         <input type="number" step="0.5" min="0" name="salary" class="form-control" [(ngModel)]="employe.salary">
                     </div>
                     <div class="col-lg-6">
-                        <label for="fname">Date d'entrée</label>
+                        <label for="fname">Date of entry</label>
                         <input type="date" name="dateEntree" class="form-control" [(ngModel)]="employe.dateEntree">
                     </div>
                 </div>
@@ -93,7 +90,7 @@
                     
                 <br>
                 <br>
-                <input type="submit" value="Sauvegarder" class="btn btn-primary float-right">
+                <input type="submit" value="Save" class="btn btn-primary float-right">
 
             </form>
             </div>

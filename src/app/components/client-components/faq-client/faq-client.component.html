@@ -1,23 +1,48 @@
-<div class="container">
-    <mat-accordion>
-  
-      <mat-expansion-panel   *ngFor="let faq of faqs">
-        <mat-expansion-panel-header [collapsedHeight]="CollapsedHeight" [expandedHeight]="ExpandedHeight" matRipple>
-          <mat-panel-title>
-            
-            {{faq.title}}
-          </mat-panel-title>
-  
-        </mat-expansion-panel-header>
-        <mat-panel-description>
-          {{faq.content}}
-        </mat-panel-description>
-      </mat-expansion-panel>
-  
-      
 
-    </mat-accordion>
-  </div>
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+
+<h3 class="title-body"> Faqs</h3>
+<hr width="60%" style="text-align: left; margin-bottom: 50px;  color: #535456;">
+<div _ngcontent-roy-c3="" >
+    
+    <br _ngcontent-roy-c3="">
+    
+    <br><br><br>
+    <div class="row ">
+        <div class="col-md-12">
+    <table class="table table-striped card-body text" style="padding-left:50%;padding-right:10%">
+    
+        <thead class="thead-inverse">
+        <tr>
+          <th>Question</th>
+          <th>Réponse</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let faq of faqs | paginate: {itemsPerPage: 10, currentPage: p}" >
+                <td>{{faq.title}}</td>
+                <td><p class="content" [innerHTML]="faq.content"></p></td>
+                
+               
+    
+               
+            </tr>
+        </tbody>
+      </table>
+      <div class="pagination">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+      </div>
+    </div>
+</div>
+<app-footer></app-footer>
 
 
-  
+
+
+
+
+<!--<modal>
+
+</modal>-->

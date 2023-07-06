@@ -6,7 +6,7 @@
     
     <div class="col-lg-12 col-md-12 col-sm-12" >
         <div class=""  >
-            <h4 class="title-body"> Ajouter Réclamation </h4>
+            <h4 class="title-body"> Add a Claim </h4>
             <hr width="60%" style="text-align: left; margin-bottom: 50px;  color: #535456;">
         </div>
 
@@ -18,7 +18,7 @@
         <form class="form-horizontal style-form" style="margin-top: 20px;">
 
         <div class="form-group">
-            <label class="col-sm-2 col-sm-2 control-label">Date de création</label>
+            <label class="col-sm-2 col-sm-2 control-label">Creation date</label>
             <div class="col-sm-10">
               <input type="date" [(ngModel)]="claim.createdAt" class="form-control" name="createdAt" id="createdAt" placeholder="">
             </div>
@@ -27,7 +27,7 @@
          
          
           <div class="form-group">
-            <label class="col-sm-2 col-sm-2 control-label" >Type de requête</label>
+            <label class="col-sm-2 col-sm-2 control-label" >Claim type </label>
             <div style="margin-top:5px;height: 20px;;" class="col-sm-10">
               <select class="col-sm-12" id="typeCong" name="typeCong" [(ngModel)]="claim.typeClaim" class="form-control" style="height: 30px;">
                 <option value="Type IT">Type IT</option>
@@ -53,7 +53,7 @@
     
       <div  class="col-lg-12 col-md-12 col-sm-12" >
         <button type="button" class="btn btn-primary float-right" 
-        (click)="createDemandeClaim()" style="margin-left: 300px;">Enregistrer</button>
+        (click)="createDemandeClaim()" style="margin-left: 300px;">Send</button>
         
       </div>
       
