@@ -1,11 +1,7 @@
-
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
 <div class="container" >
-
-   
-
-
 <div class="left"> 
-    <img src="http://localhost:8080/avatar/{{conge.user.idUser}}" alt="user" width="150" class="img-circle">
     <br>
     <br>
     <h4>{{employe.prenom}} {{employe.nom}} </h4>
@@ -42,7 +38,7 @@
         <br>
         <br>
         <div class="info_data">
-        <button class="btnS" data-toggle="modal1" data-target="#myModal1"
+        <button class="btn btn-primary" data-toggle="modal1" data-target="#myModal1"
             (click)="showModal1=true">Accept</button>
 
             <div id="myModal1" class="modal fade" role="dialog" [ngClass]="{'show':showModal1}">
@@ -60,10 +56,10 @@
                   <div class="modal-footer">
                     <div>
                      
-                    <button type="button" class="btn btn-default" data-dismiss="modal"
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"
                     (click)="onAcceptConge()"(click)="showModal1=false">Accept</button>
                 
-                    <button type="button" class="btn btn-default" data-dismiss="modal"
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"
                     (click)="showModal1=false">Cancel</button>
                   </div>
                   </div>
@@ -75,7 +71,7 @@
             </div>
 
 
-        <button class="btnS" data-toggle="" data-target=""
+        <button class="btn btn-danger" data-toggle="" data-target=""
         (click)="showModal2=true">Refuse</button>
 
         <div id="myModal2" class="modal fade" role="dialog" [ngClass]="{'show':showModal2}">
