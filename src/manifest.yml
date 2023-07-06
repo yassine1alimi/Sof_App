@@ -1,0 +1,13 @@
+---
+applications:
+
+  - name: stage-devFront
+    instances: 1
+    memory: 1032M
+    disk_quota: 512M
+    buildpacks:
+      - staticfile_buildpack_v1_5_36
+    path: Sof_App/dist
+    env:
+      FORCE_HTTPS: true
+
