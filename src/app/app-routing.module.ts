@@ -68,6 +68,11 @@ import { MeetingsEmployeComponent } from './components/employe-components/meetin
 import { NotesFaqsComponent } from './components/admin-components/faqs/notes-faqs/notes-faqs.component';
 import { UpdateFaqComponent } from './components/admin-components/faqs/update-faq/update-faq.component';
 import { FaqClientComponent } from './components/client-components/faq-client/faq-client.component';
+import { CongeEmployeComponentComponent } from './components/employe-components/conge-employe-component/conge-employe-component.component';
+import { DemandeCongeComponentComponent } from './components/employe-components/demande-conge-component/demande-conge-component.component';
+import { CongeRequestComponentComponent } from './components/admin-components/conges/conge-request-component/conge-request-component.component';
+import { BilanCongesComponentComponent } from './components/admin-components/conges/bilan-conges-component/bilan-conges-component.component';
+import { ListCongesComponent } from './components/admin-components/conges/list-conges/list-conges.component';
 
 //import { HomeComponent } from './home/home.component';
 //import { RegisterComponent } from './register/register.component';
@@ -152,12 +157,17 @@ const routes: Routes = [
   { path: 'addreclamationcLIENT', component: AddReclamationComponent },
   { path: 'list-reclamations1', component: ListReclamations1Component },
 
-  
+
   {path:"forum/chat",component:ChatComponent},
   {path:"forum",component:ForumComponent},
 
  {path:"faq-client",component:FaqClientComponent},
   { path: 'footer', component: FooterComponent },
+  { path: 'demandeConge', component: DemandeCongeComponentComponent }, 
+  { path: 'congeRequest/:id', component: CongeRequestComponentComponent },
+  { path: 'bilan-conges', component: BilanCongesComponentComponent },
+  { path: 'conge-employe', component: CongeEmployeComponentComponent },
+  { path: 'list-conges', component: ListCongesComponent },
 
 ];
 

@@ -1,0 +1,80 @@
+
+<div class="row mt" >
+    
+  <div class="col-lg-12 col-md-12 col-sm-12" >
+      <div  >
+          <h4 class="title-body"> Request for a vacation</h4>
+      
+      </div>
+
+  </div>
+
+  <div class="col-lg-12 col-md-12 col-sm-12" >
+    <div class="" >
+      
+      <form class="form-horizontal style-form" style="margin-top: 20px;">
+
+      <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">Created at</label>
+          <div class="col-sm-10">
+            <input type="date" [(ngModel)]="conge.createdAt" class="form-control" name="createdAt" id="createdAt" placeholder="">
+          </div>
+      </div>
+     
+        <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">Period</label>
+          <div class="col-sm-10">
+            <input type="text" [(ngModel)]="conge.duree" class="form-control" name="duree" id="duree" placeholder="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">start date </label>
+          <div class="col-sm-10">
+            <input type="date" [(ngModel)]="conge.debutCong" class="form-control" name="debutCong" id="debutCong" placeholder="">
+            
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">End date </label>
+          <div class="col-sm-10">
+              <input type="date" [(ngModel)]="conge.finCong" class="form-control" name="finCong" id="finCong" placeholder="">
+            
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label" >Type of Request</label>
+          <div style="margin-top:5px;height: 20px;;" class="col-sm-10">
+            <select class="col-sm-12" id="typeCong" name="typeCong" [(ngModel)]="conge.typeCong" class="form-control" style="height: 30px;">
+              <option value="individual training vacation">individual training vacation</option>
+              <option value="Annual vacation" >Annual vacation</option>
+              <option value="Parental vacation" >Parental vacation</option>
+              <option value="Sick vacation">Sick vacation</option>
+              <option value="Without pay vacation">Without pay vacation</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">Description</label>
+          <div class="col-sm-10">
+            <textarea  [(ngModel)]="conge.description" class="form-control" name="description" id="description" placeholder="Ecrivez-nous une description de votre demande congé"></textarea>
+          </div>
+      </div>
+       
+      </form>
+      
+    </div>
+    
+  </div>
+  <div  class="col-lg-6 col-md-6 col-sm-12" >
+     
+  </div>
+    <!-- DROPDOWN BUTTONS -->
+    <div  class="col-lg-12 col-md-12 col-sm-12" >
+      <button type="button" class="btn-save" 
+      (click)="createDemandeConge()" style="margin-left: 300px;">Save</button>
+      
+    </div>
+    
+    
+</div>
+  

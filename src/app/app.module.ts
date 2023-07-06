@@ -123,6 +123,11 @@ import { NotesFaqsComponent } from './components/admin-components/faqs/notes-faq
 import { UpdateFaqComponent } from './components/admin-components/faqs/update-faq/update-faq.component';
 import { ShowMessagesComponent } from './components/admin-components/contacts/show-messages/show-messages.component';
 import { FaqClientComponent } from './components/client-components/faq-client/faq-client.component';
+import { CongeEmployeComponentComponent } from './components/employe-components/conge-employe-component/conge-employe-component.component';
+import { DemandeCongeComponentComponent } from './components/employe-components/demande-conge-component/demande-conge-component.component';
+import { BilanCongesComponentComponent } from './components/admin-components/conges/bilan-conges-component/bilan-conges-component.component';
+import { CongeRequestComponentComponent } from './components/admin-components/conges/conge-request-component/conge-request-component.component';
+import { ListCongesComponent } from './components/admin-components/conges/list-conges/list-conges.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -202,6 +207,11 @@ import { FaqClientComponent } from './components/client-components/faq-client/fa
     UpdateFaqComponent,
     ShowMessagesComponent,
     FaqClientComponent,
+    CongeEmployeComponentComponent,
+    DemandeCongeComponentComponent,
+    BilanCongesComponentComponent,
+    CongeRequestComponentComponent,
+    ListCongesComponent,
     
     
    
@@ -258,7 +268,7 @@ import { FaqClientComponent } from './components/client-components/faq-client/fa
   ],
   providers: [EmployeService,CandidateService,TodoService,EmailService,authInterceptorProviders,GroupeService,DepartementService,  { provide: MAT_DIALOG_DATA, useValue: {} },
     { provide: MatDialogRef, useValue: {} }],
-  bootstrap: [AppComponent,ListDemandesComponent,ListClaimsComponent],
+  bootstrap: [AppComponent,ListDemandesComponent,ListClaimsComponent,ListCongesComponent],
   entryComponents:[AjoutNoteComponent,AjoutFaqComponent,AddTodoComponent,AddGroupeComponent,AjouterDepartementComponent,MeetingComponent,AcceptComponent,UpdateMeetingComponent,AffecterClaimComponent,ClaimComponent]
 })
 export class AppModule { }

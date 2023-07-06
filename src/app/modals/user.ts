@@ -23,6 +23,9 @@ export class User {
     public username : String;
     public password : String;
     public repassword : String;
+    public  dureeConges : number;
+    public  soldeConges :number;
+    public joursConges :number;
     
 
 }
