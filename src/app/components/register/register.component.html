@@ -1,6 +1,6 @@
 <form class="form-login">
   <div class="card card-container">
-    <h2 class="form-login-heading">INSCRIVEZ-VOUS </h2>
+    <h2 class="form-login-heading">REGISTER </h2>
     <form
       *ngIf="!isSuccessful"
       name="form"
@@ -28,14 +28,14 @@
         />
         
         <div *ngIf="email.errors && (email.invalid || email.touched)">
-          <small class="text-danger" *ngIf="email.errors.required" [class.d-none]=" email.untouched" style="font-size: 11px;"> L'adresse électronique est obligatoire</small>
-          <small class="text-danger" *ngIf="email.errors.email" [class.d-none]=" email.untouched" style="font-size: 11px;"> L'adresse e-mail doit être une adresse e-mail valide</small>
+          <small class="text-danger" *ngIf="email.errors.required" [class.d-none]=" email.untouched" style="font-size: 11px;"> Email address is required</small>
+          <small class="text-danger" *ngIf="email.errors.email" [class.d-none]=" email.untouched" style="font-size: 11px;"> The e-mail address must be a valid e-mail address</small>
         </div>
       </div>
       <br>
 
       <div class="col-6">
-        <label for="fname">Date de naissance</label>
+        <label for="fname">Date of birth</label>
         <input
           type="Date"
           class="form-control"
@@ -57,7 +57,7 @@
       <br>
       <div class="form-row">
       <div class="col-6">
-        <label for="fname">Téléphone</label>
+        <label for="fname">Phone</label>
         <input
           type="tel"
           class="form-control"
@@ -81,7 +81,7 @@
       </div>
       <br>
       <div class="col-6">
-        <label for="fname">Nom</label>
+        <label for="fname">Name</label>
         <input
           type="text"
           class="form-control"
@@ -106,7 +106,7 @@
       <br>
       <div class="form-row">
       <div class="col-6">
-        <label for="fname">Mot de passe</label>
+        <label for="fname">Password</label>
         <input
           type="password"
           class="form-control"
@@ -122,14 +122,14 @@
 
 
         <div *ngIf="password.errors && (password.invalid || password.touched)">
-          <small class="text-danger" *ngIf="password.errors.required" [class.d-none]=" password.untouched" style="font-size: 11px;"> Le mot de passe est requis</small>
-          <small class="text-danger" *ngIf="password.errors.minlength" [class.d-none]=" password.untouched" style="font-size: 11px;"> Le mot de passe doit comporter au moins 6 caractères</small>
+          <small class="text-danger" *ngIf="password.errors.required" [class.d-none]=" password.untouched" style="font-size: 11px;"> Password is required</small>
+          <small class="text-danger" *ngIf="password.errors.minlength" [class.d-none]=" password.untouched" style="font-size: 11px;"> Password must be at least 6 characters long</small>
         </div>
 
       </div>
       <br>
       <div class="col-6">
-        <label for="fname">Confirmer le mot de passe</label>
+        <label for="fname">Confirm password</label>
         <input
           type="password"
           class="form-control"
@@ -149,7 +149,7 @@
           <small class="text-danger" *ngIf="repassword.errors.minlength" [class.d-none]=" repassword.untouched" style="font-size: 11px;"> Password must be at least 6 characters</small>
         </div>
         <div *ngIf="repassword.valid && repassword.value != password.value" class="text-danger">
-          Les mots de passe saisis ne correspondent pas
+          Entered passwords do not match
       </div>
 
       </div>
@@ -158,17 +158,17 @@
       <br>
       <div>
         <button class="btn btn-theme btn-block" (click)="onSubmit()" type="button">
-          <i class="fa fa-lock"></i> S'inscrire</button>
+          <i class="fa fa-lock"></i> Sign in</button>
       </div>
 
       <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
-        L'inscription a échoué !<br />{{ errorMessage }}
+        Registration failed!<br />{{ errorMessage }}
       </div>
     </div>
     </form>
 
     <div class="success" *ngIf="isSuccessful">
-      vous vous êtes inscrit avec succès
+      you have successfully registered
     </div>
 
   </div>

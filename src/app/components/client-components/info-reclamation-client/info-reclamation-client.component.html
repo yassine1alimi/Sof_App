@@ -9,7 +9,7 @@
         </h4>
         <form class="form-horizontal style-form" style="margin-top: 5px;">
         <div class="form-group">
-            <label class="col-sm-2 col-sm-2 control-label">Last name
+            <label class="col-sm-2 col-sm-2 control-label">First name
             </label>
             <div class="col-sm-10">
               <input type="text" [(ngModel)]="reclamation.prenom" class="form-control" name="prenom" id="prenom" placeholder=""
@@ -25,7 +25,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="col-sm-2 col-sm-2 control-label">Nom</label>
+            <label class="col-sm-2 col-sm-2 control-label">Last name</label>
             <div class="col-sm-10">
               <input type="text" [(ngModel)]="reclamation.nom" class="form-control" name="nom" id="nom" placeholder=""
               minlength="3" [class.is-invalid]="nom.invalid && nom.touched"
