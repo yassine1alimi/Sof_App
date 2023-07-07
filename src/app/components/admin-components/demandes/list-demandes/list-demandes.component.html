@@ -13,8 +13,8 @@ Manage and resolve various types of tickets raised by employees, ensuring a smoo
   <tr>
     <th></th>
     <th> Email</th>
-    <th>First name </th>
-    <th>Last name</th>
+    <th>Category </th>
+    <th>Urgence</th>
     <th>action</th>
     </tr>
   </thead>
@@ -22,8 +22,8 @@ Manage and resolve various types of tickets raised by employees, ensuring a smoo
       <tr *ngFor="let demande of demandes" >
         <td><img src="http://localhost:8087/avatar/{{demande.user.idUser}}" alt="user" width="70" class="img-circle"></td>
         <td>{{demande.user.email}}</td>  
-        <td>{{demande.user.prenom}}</td>
-          <td>{{demande.user.nom}}</td>
+        <td>{{demande.categorie}}</td>
+          <td>{{demande.urgence}}</td>
           
           <td>
            

@@ -27,24 +27,26 @@
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Categorie</label>
           <div style="margin-top:5px;height: 20px;;" class="col-sm-10">
-            <select class="col-sm-12" id="typeCong" name="typeCong" [(ngModel)]="demande.categorie" class="form-control" style="height: 30px;">
-              <option value="Type IT" selected>Type IT</option>
-              <option value="Type 1" >Type 1</option>
-              <option value="Type 2" >Type 2</option>
-              <option value="Type 3">Type 3</option>
-              <option value="Type 4">Type 4</option>
+            <select class="col-sm-12" id="categorie" name="categorie" [(ngModel)]="demande.categorie" class="form-control" style="height: 30px;">
+              <option value="IT\Appli\Bug" >IT\Appli\Bug</option>
+              <option value="IT\Hardware" >IT\Hardware</option>
+              <option value="Moyen Generaux">Moyen Generaux</option>
+              <option value="Reseaux">Reseaux</option>
+              <option value="Securité RX">Securité RX</option>
+              <option value="IT\Applis\Sofco">IT\Applis\Sofco</option>
+
+
             </select>
           </div>
         </div>
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Urgence </label>
           <div style="margin-top:5px;height: 20px;;" class="col-sm-10">
-            <select class="col-sm-12" id="typeCong" name="typeCong" [(ngModel)]="demande.urgence" class="form-control" style="height: 30px;">
-              <option value="Type IT" selected>Type IT</option>
-              <option value="Type 1" >Type 1</option>
-              <option value="Type 2" >Type 2</option>
-              <option value="Type 3">Type 3</option>
-              <option value="Type 4">Type 4</option>
+            <select class="col-sm-12" id="urgence" name="urgence" [(ngModel)]="demande.urgence" class="form-control" style="height: 30px;">
+              <option value="Trés haute" >Trés haute</option>
+              <option value="Haute" >Haute</option>
+              <option value="Moyenne">Moyenne</option>
+              <option value="Basse">Basse</option>
             </select>
           </div>
         </div>
@@ -52,7 +54,6 @@
           <label class="col-sm-2 col-sm-2 control-label" >Type of Request</label>
           <div style="margin-top:5px;height: 20px;;" class="col-sm-10">
             <select class="col-sm-12" id="typeCong" name="typeCong" [(ngModel)]="demande.typeDemande" class="form-control" style="height: 30px;">
-              <option value="Type IT" selected>Type IT</option>
               <option value="Type 1" >Type 1</option>
               <option value="Type 2" >Type 2</option>
               <option value="Type 3">Type 3</option>

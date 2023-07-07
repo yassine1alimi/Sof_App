@@ -23,7 +23,7 @@ export class ListCongesComponent implements OnInit {
     this.congeService.getCongesList().subscribe(
       response => {
         this.conges = response
-      console.log(response)}
+      console.log("list of conge",response)}
      );
      
   }

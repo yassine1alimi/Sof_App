@@ -12,5 +12,5 @@ export class Conge {
 	  soldeConge: number;
 	  statusOfDemand: boolean;
 	  idUser:number;
-	  user: User;
+	  user4: User;
 }
