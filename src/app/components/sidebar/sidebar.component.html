@@ -50,7 +50,7 @@
           <mat-expansion-panel>
             <mat-expansion-panel-header>
               <mat-panel-title style="margin-left: -7%;margin-bottom: -3px;width: 30px;">
-                <i class="fa fa-group"></i>  <span style="margin-left: 7px;">Employees</span>
+                <i class="fa fa-group"></i>  <span style="margin-left: 7px;">manage employees</span>
               </mat-panel-title>
             </mat-expansion-panel-header>
         
@@ -68,13 +68,26 @@
           <mat-expansion-panel>
             <mat-expansion-panel-header>
               <mat-panel-title style="margin-left: -7%;margin-bottom: -3px;">
-                <i class="fa fa-desktop"></i>  <span style="margin-left: 7px;">Requests</span>
+                <i class="fa fa-desktop"></i>  <span style="margin-left: 7px;">personnels</span>
               </mat-panel-title>
             </mat-expansion-panel-header>
         
             <div class="vacation-sub-menu">
-              <li><a style= "margin-bottom:-10px"routerLink ="/bilan-demandes"><i class="fa fa-book"></i> statut des demandes</a></li>
-              <li><a routerLink ="/list-requests"><i class="fa fa-edit"></i>Review requests</a></li>
+              <mat-accordion class="sidebar" routerLinkActive = "active" *ngIf="showAdminBoard" >
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title style="margin-left: -7%;margin-bottom: -3px;">
+                      <i class="fa fa-desktop"></i>  <span style="margin-left: 7px;">Vacations</span>
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+              
+                  <div class="vacation-sub-menu">
+                    <li><a style= "margin-bottom:-10px"routerLink ="/bilan-conges"><i class="fa fa-book"></i> Review of vacations</a></li>
+                    <li><a routerLink ="/list-conges"><i class="fa fa-edit"></i>List of vacation requests</a></li>
+                  </div>
+                </mat-expansion-panel>
+              </mat-accordion>             
+               <li><a routerLink ="/list-requests"><i class="fa fa-edit"></i>Review requests</a></li>
             </div>
           </mat-expansion-panel>
         </mat-accordion>
@@ -84,13 +97,13 @@
           <mat-expansion-panel>
             <mat-expansion-panel-header>
               <mat-panel-title style="margin-left: -7%;margin-bottom: -3px;">
-                <i class="fa fa-desktop"></i>  <span style="margin-left: 7px;">Reclamations cLIENT</span>
+                <i class="fa fa-desktop"></i>  <span style="margin-left: 7px;">Customers</span>
               </mat-panel-title>
             </mat-expansion-panel-header>
         
             <div class="vacation-sub-menu">
-              <li><a style= "margin-bottom:-10px" routerLink ="/list-claims"><i class="fa fa-book"></i> Claims</a></li>
-              <li><a routerLink ="/list-reclamations"><i class="fa fa-edit"></i>customer complaints</a></li>
+              <li><a style= "margin-bottom:-10px" routerLink ="/list-claims"><i class="fa fa-book"></i> internal customer</a></li>
+              <li><a routerLink ="/list-reclamations"><i class="fa fa-edit"></i>external customer </a></li>
             </div>
           </mat-expansion-panel>
         </mat-accordion>
@@ -159,13 +172,13 @@
     
         </li>-->
 
-        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard">
+        <!--li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard">
           <a href="javascript:;">
             <i class="fa fa-calendar"></i>
             <span routerLink ="/holiday-calendar">Calendrier des congés</span>
             <span class="dcjq-icon"></span></a>
     
-        </li>>
+        </li>-->
 
         <!--<li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showEmployeBoard">
           <a href="javascript:;" >
@@ -179,13 +192,13 @@
           <mat-expansion-panel>
             <mat-expansion-panel-header>
               <mat-panel-title style="margin-left: -7%;margin-bottom: -3px;">
-                <i class="fa fa-desktop"></i> <span style="margin-left: 7px;">tickets</span> 
+                <i class="fa fa-desktop"></i> <span style="margin-left: 7px;">Requests</span> 
               </mat-panel-title>
             </mat-expansion-panel-header>
         
             <div class="vacation-sub-menu">
-              <li><a routerLink ="/ajouter_demande">Add ticket</a></li>
-              <li><a routerLink ="/history_requests">My tickets</a></li>
+              <li><a routerLink ="/ajouter_demande">Add Request</a></li>
+              <li><a routerLink ="/history_requests">My Requests</a></li>
               
             </div>
           </mat-expansion-panel>
@@ -276,7 +289,9 @@
     
         </li>
 
-<mat-accordion class="sidebar" routerLinkActive = "active" *ngIf="showUserBoard" >
+
+
+        <mat-accordion class="sidebar" routerLinkActive = "active" *ngIf="showUserBoard" >
           <mat-expansion-panel>
             <mat-expansion-panel-header>
               <mat-panel-title style="margin-left: -7%;margin-bottom: -3px;">
@@ -309,20 +324,7 @@
         </li>
 
 
-        <mat-accordion class="sidebar" routerLinkActive = "active" *ngIf="showAdminBoard" >
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title style="margin-left: -7%;margin-bottom: -3px;">
-                <i class="fa fa-desktop"></i>  <span style="margin-left: 7px;">Vacations</span>
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-        
-            <div class="vacation-sub-menu">
-              <li><a style= "margin-bottom:-10px"routerLink ="/bilan-conges"><i class="fa fa-book"></i> Review of vacations</a></li>
-              <li><a routerLink ="/list-conges"><i class="fa fa-edit"></i>Requests for vacations</a></li>
-            </div>
-          </mat-expansion-panel>
-        </mat-accordion>
+       
         <mat-accordion class="sidebar" routerLinkActive = "active" *ngIf="showEmployeBoard" >
           <mat-expansion-panel>
             <mat-expansion-panel-header>

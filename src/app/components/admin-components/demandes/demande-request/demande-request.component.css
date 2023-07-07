@@ -23,7 +23,7 @@ h2{
 .container .left{
     width: 40%;
     
-    background: rgb(179, 233, 234);
+    background: linear-gradient(90deg, rgba(255,151,40,1) 0%, rgba(17,197,187,1) 69%, rgba(2,103,173,1) 100%);
      padding: 30px 25px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -93,7 +93,7 @@ h3 {
 
 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   
 }
 
@@ -115,6 +115,5 @@ h5 {
 
 button{
     font-size: 14px;
-    background-color: #4ECDC4;
     
 }

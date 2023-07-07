@@ -4,8 +4,8 @@ import { User } from './user';
 export class Demande {
 	idDemande:number;
 	typeDemande:String;
-	debutDemande:Date;
-	finDemande:Date;
+	categorie:String;
+	urgence:String;
 	createdAt:Date;
     description:String;
 	 // duree: String; 

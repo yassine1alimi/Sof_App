@@ -11,8 +11,8 @@
       
           <thead class="thead-inverse">
           <tr>
-            <th>Start day</th>
-            <th>End day</th>
+            <th>Categorie</th>
+            <th>Urgence</th>
             <th>type</th>
             <th>Description</th>
             <th>Status</th>
@@ -22,8 +22,8 @@
 
           <tbody>
               <tr *ngFor="let demande of demandes" >
-                  <td>{{demande.debutDemande}}</td>
-                  <td>{{demande.finDemande}}</td>   
+                  <td>{{demande.categorie}}</td>
+                  <td>{{demande.urgence}}</td>   
                   <td>{{demande.typeDemande}}</td>
                   <td>{{demande.description}}</td>
                   <td>{{demande.statusOfDemand}}</td>

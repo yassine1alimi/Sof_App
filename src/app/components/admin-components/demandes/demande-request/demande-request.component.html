@@ -20,21 +20,26 @@
         <div class="info">
               
           <div class="info_data">
-                
-              <div class="data">
-                <h4>Type of request
-                <p> {{demande.typeDemande}}</p> </h4>
-            </div>
+            <div class="data">
+              <h4>description</h4>
+              <p> {{demande.description}}</p>
+            </div> 
+              
           </div>
           <div class="info_data">
               <div class="data">
-                <h4>Start day</h4>
-                <p> {{demande.debutDemande}}</p>
+                <h4>Urgence</h4>
+                <p> {{demande.urgence}}</p>
             </div>
             <div class="data">
-              <h4>end day</h4>
-              <p> {{demande.finDemande}}</p>
+              <h4>categorie</h4>
+              <p> {{demande.categorie}}</p>
             </div>
+            <div class="data">
+              <h4>Type of request
+              <p> {{demande.typeDemande}}</p> </h4>
+          </div>
+            
           </div>
             
             <br>
@@ -58,7 +63,7 @@
                       <div class="modal-footer">
                         <div>
                          
-                        <button type="button" class="btn btn-default" data-dismiss="modal"
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"
                         (click)="onAcceptDemande()"(click)="showModal1=false">Accept</button>
                     
                         <button type="button" class="btn btn-default" data-dismiss="modal"
@@ -73,7 +78,7 @@
                 </div>
     
     
-            <button class="btnS" data-toggle="" data-target=""
+            <button class="btn btn-danger" data-toggle="" data-target=""
             (click)="showModal2=true">Refuse</button>
     
             <div id="myModal2" class="modal fade" role="dialog" [ngClass]="{'show':showModal2}">
